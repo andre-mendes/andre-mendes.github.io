@@ -4,7 +4,7 @@ header {
     height: $header-height;
     padding: 0 20px;
     box-sizing: border-box;
-    background: $primary-color;
+    //background: $primary-color;
     position: absolute;
     top: 0;
     z-index: 9;
@@ -35,6 +35,3 @@ header {
     font-size: 20px;
 }
 
-body {
-    background: #141618;
-}
