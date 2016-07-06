@@ -9,6 +9,18 @@ header {
     top: 0;
     z-index: 9;
     width: 100%;
+    transition: all 0.4s;
+
+    &.transformScroll {
+        transform: translateY(-100%);
+    }
+
+    &.active {
+        position: fixed;
+        top: 0;
+        background: $secondary-color;
+        transform: translateY(0%);
+    }
 }
 
 .header-title {

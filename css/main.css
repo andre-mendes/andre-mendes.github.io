@@ -365,7 +365,15 @@ header {
   position: absolute;
   top: 0;
   z-index: 9;
-  width: 100%; }
+  width: 100%;
+  transition: all 0.4s; }
+  header.transformScroll {
+    transform: translateY(-100%); }
+  header.active {
+    position: fixed;
+    top: 0;
+    background: #2196F3;
+    transform: translateY(0%); }
 
 .header-title {
   color: #fff;
@@ -388,7 +396,7 @@ header {
   font-size: 20px; }
 
 .main-section {
-  background: url("../background.jpg") center center;
+  background: url("../img/background.jpg") center center;
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
@@ -421,11 +429,21 @@ header {
   opacity: 0.8;
   height: 100vh; }
 
+.about {
+  background: url("../img/skills-bg.jpg") no-repeat scroll center center/cover; }
+
+.sec-overlay {
+  background: rgba(255, 255, 255, 0.92);
+  height: 100%;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 100px; }
+
 .title-content {
   letter-spacing: 1px;
-  color: #111;
+  color: #2196F3;
   font-weight: bold;
-  margin-top: 60px;
+  margin-top: 0px;
   text-align: center;
   font-size: 40px;
   padding: 0 10%; }
