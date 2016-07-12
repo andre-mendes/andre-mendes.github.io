@@ -1,9 +1,23 @@
 @import "helpers/normalize";
 @import "helpers/variables";
 @import "helpers/typography";
+@import "helpers/global";
+@import "helpers/animate";
 
 
-@import "components/header";
+//@import "components/header";
 
-@import "layout/home";
-@import "layout/about";
+@import "components/gridirce";
+@import "components/navbar";
+@import "components/social-nav";
+@import "components/animations";
+@import "components/sections";
+
+//@import "layout/home";
+//@import "layout/about";
+//@import "layout/aboutme";
+
+
+@import "layout/novo";
+@import "layout/intro";
+

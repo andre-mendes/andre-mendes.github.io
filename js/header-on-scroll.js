@@ -1,58 +1,49 @@
-(function(){
+/*
+var scrollObject = {};
+window.onscroll = getScrollPosition;
 
-	var headerScroll = getId('header-main'),
-		scrollHeight = 200,
-		menuIcon 	 = getId('menu-icon'),
-		menuMain 	 = getId('menu-main'),
-		classMenu    = 'menu-active',
-		classHeader	 = 'active';
+function getScrollPosition(){
+    scrollObject = {
+       x: window.pageXOffset,
+       y: window.pageYOffset
+    }
+    // If you want to check distance
+    if(scrollObject.y > 200) {
+        // add class
+        document.querySelector('#header-main').classList.remove('transformScroll');
+        document.querySelector('#header-main').classList.add('active');
+    } else {
+        // remove class
+        document.querySelector('#header-main').classList.remove('active');
+        document.querySelector('#header-main').classList.add('transformScroll');
+    }
+    if(scrollObject.y == 0) {
+      document.querySelector('#header-main').classList.remove('transformScroll');
+    }
+}*/
 
-	//SCROLL
-	window.addEventListener("scroll", scrollOn);
+var scrollObject = {},
+    lastScrollTop = 0;
+// element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+window.addEventListener("scroll", function () { // or window.addEventListener("scroll"....
+  var st = window.pageYOffset || document.documentElement.scrollTop,
+      mainHeader = document.querySelector('#header-main');
 
+  scrollObject = {
+    x: window.pageXOffset,
+    y: window.pageYOffset
+  }
 
+  if (st > lastScrollTop) {
+    mainHeader.classList.remove('active');
+    mainHeader.classList.add('transformScroll');
+  } else {
+    mainHeader.classList.add('active');
+    mainHeader.classList.remove('transformScroll');
+  }
+  lastScrollTop = st;
 
-	function scrollOn() {
-		animatedScroll(headerScroll,classHeader,scrollHeight);
-
-		var scrollBarPosition = window.pageYOffset | document.body.scrollTop;
-
-   		if (headerScroll.classList) {
-		   headerScroll.classList.add('transformScroll');
-
-		} else if (headerScroll.classList.contains('active')) {
-		    headerScroll.classList.remove('transformScroll');
-		}
-
-		if (scrollBarPosition == 0) {
-			headerScroll.classList.remove('transformScroll');
-		}
-	}
-
-	//MENU RESPONSIVE
-	/*menuIcon.onclick = function(){
-	 	toggle(menuMain,classMenu);
-	}*/
-
-	//Função que on scroll muda o comportamento do elemento
-	function animatedScroll(element,classN,height) {
-		y = pageYOffset; //resgata do objeto window o valor pageYOffset e guarda na variável
-		if (y > height) {
-			element.className = classN;
-		} else {
-			element.className = '';
-		}
-	}
-
-	// Função toggle adiciona ou tira a class do elemento
-	function toggle(element,classe) {
-		element.className = element.className ? '' : classe;
-	}
-
-	//Função que retorna o id do elemento
-	function getId(id) {
-		return document.getElementById(id);
-	}
-
-
-})();
+  if(scrollObject.y == 0) {
+    mainHeader.classList.remove('active');
+  }
+}, false);

@@ -1,0 +1,23 @@
+.social-nav {
+  padding: 0;
+  list-style: none;
+  font-size: 1.4285714286em;
+  opacity: 1;
+}
+
+.social-nav li {
+  display: inline-block;
+  margin: 0 0 0 20px;
+}
+
+.social-nav li:first-child {
+  margin-left: 0;
+}
+
+.social-nav a {
+  color: currentColor;
+}
+
+.social-nav a:hover {
+  color: #FB544D;
+}

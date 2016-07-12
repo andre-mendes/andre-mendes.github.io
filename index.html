@@ -3,59 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>André Mendes</title>
+  <title>André Mendes - Front-End Developer</title>
 
-  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/main.css">
 </head>
 
+
 <body>
-  <header id="header-main">
-    <h1 class="header-title">André Mendes</h1>
 
-    <nav>
-      <a href="#!"class="header-link"><i class="fa fa-github" aria-hidden="true"></i></a>
-      <a href="#!"class="header-link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-      <a href="#!"class="header-link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-    </nav>
-  </header>
+  <div class="wrapper h-card">
 
-  <div class="bg-overlay"></div>
-  <section class="main-section">
-    <h2>We think, I code, you win!</h2>
-  </section>
-
-  <section class="about">
-    <div class="sec-overlay">
-      <h2 class="title-content">about me</h2>
-
-      <p class="description-container">
-        I'm André Mendes, a highly motivated guy graduated in advertising with experience
-        in Design and Development. I've worked with several larger as well as smaller
-        brands and I'm a fan of a good challenge and open source enthusiastic.
-      </p>
+    <!-- BEGIN NAV-->
+    <div class="main-nav">
+      <nav>
+        <ul>
+          <li><a href="#intro">Intro</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#expirience">Expirience</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="blog.html" class="external">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="btn-icon btn-nav">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
     </div>
-  </section>
+    <!-- END NAV-->
+
+    <!-- Beggin Header
+    ================================================== -->
+    <section id="intro" class="section section-bg__img section-bg__overlay section-bottom__rise">
+      <div class="bg"></div>
+      <div class="section-inner">
+
+        <div class="container">
+
+          <div class="intro">
+            <header class="heading"><i data-wow-delay="0.1s" class="fa fa-4x fa-code wow fadeInDown"></i>
+              <h1 class="wow zoomIn">
+                <span class="name">I am <span class="">André Mendes</span></span>
+                <span class="animated-letters category">
+                  <b class="is-visible">Front-End</b><b>Creator</b><b>Mobile-Dev</b>
+                </span>
+                </h1>
+              <div class="separator wow zoomIn"></div>
+            </header>
+          </div>
+
+        </div>
+
+      </div>
+      <canvas id="particles"></canvas>
+    </section>
+    <!-- END HEADER-->
+
+    <!-- BEGIN ABOUT SECTION-->
+    <section id="about" class="section section-bg__light section-top__rise section-bottom__rise">
+      <div class="section-inner">
+
+        <div class="container">
+
+          <header class="heading">
+            <h2>About</h2>
+            <div class="separator"></div>
+          </header>
+
+          <div class="row vertical-align">
+            <div class="col-4 center">
+              <div class="site-photo z-depth-1">
+                <img src="images/photo.jpg" width="250" height="250" alt="André Mendes" class="photo">
+              </div>
+            </div>
+            <div class="col-8">
+              <h3>I'm Front-End UI Engineer and UX perfectionist</h3>
+              <p>A highly motivated guy, graduated in advertising with experience in Design and Development. I've worked with several larger and smaller brands and I'm a fan of a good challenge and open source enthusiastic.</p>
+              <ul class="social-nav">
+                <li><a href="#"><i class="fa fa-fw fa-github"></i></a></li>
+                <li><a href="#"><i class="fa fa-fw fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-fw fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-fw fa-facebook"></i></a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- END ABOUT SECTION-->
+
+  </div>
 
 
-  <!-- Javascript
-  ================================================== -->
-  <script src="https://use.fontawesome.com/cb32c8a31f.js"></script>
-  <script src="js/header-on-scroll.js"></script>
-  <script>
-    function scrollBanner() {
-      var scrollPos;
-      var headerText = document.querySelector('.main-section h2');
-      scrollPos = window.scrollY;
-
-      if (scrollPos <= 300) {
-          headerText.style.transform =  "translateY(" + (-scrollPos/3) +"px" + ")";
-          headerText.style.opacity = 1 - (scrollPos/300);
-      }
-    }
-
-    window.addEventListener('scroll', scrollBanner);
-  </script>
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<!-- FontAwesome -->
+<script src="https://use.fontawesome.com/cb32c8a31f.js"></script>
+<!-- WOW-->
+<script src="js/wow.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
