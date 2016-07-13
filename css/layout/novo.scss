@@ -31,20 +31,6 @@ h2 {
   text-transform: uppercase;
 }
 
-h2 a {
-  text-decoration: none;
-  color: currentColor;
-}
-
-h3 {
-  margin: 0 0 30px;
-  font: 1.78571em / 1.1 $secondary-font, cursive;
-}
-
-h3 a {
-  text-decoration: none;
-  color: currentColor;
-}
 
 h4 {
   margin: 0 0 10px;
@@ -54,11 +40,6 @@ h4 {
   text-transform: uppercase;
 }
 
-
-.container {
-  max-width: 970px;
-  margin: 0 auto;
-}
 
 .section {
   position: relative;
@@ -165,28 +146,28 @@ h4 {
 #intro {
   text-align: center;
   position: relative;
-  height: 100vh
-}
-
-#intro .bg {
-  background-image: url("../images/header-bg.jpg");
-  background: -webkit-linear-gradient(240deg, #000000 , #434343);
-  background: linear-gradient(240deg, #000000 , #434343);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 100vh;
-  z-index: 9;
+
+    .bg {
+    background-image: url("../images/header-bg.jpg");
+    //background: -webkit-linear-gradient(240deg, #000000 , #434343);
+    //background: linear-gradient(240deg, #000000 , #434343);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+  }
+
+  #particles {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+  }
 }
 
-
-#intro #particles {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 5;
-}
 
 
 

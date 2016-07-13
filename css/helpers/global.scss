@@ -3,6 +3,13 @@
 }
 
 
+.container {
+  max-width: 970px;
+  margin: 0 auto;
+}
+
+
+
 .overlay-dark {
     background: rgba(0,0,0, .7);
     height: 100%;
@@ -63,6 +70,10 @@
   background: currentColor;
   border-radius: 50%;
   color: #000;
+
+  &.separator__white {
+    color: #fff;
+  }
 }
 
 .separator:before {
@@ -76,27 +87,13 @@
   border: 1px solid;
   border-left: none;
   border-right: none;
+
+  &:before {
+    right: 20px;
+  }
 }
 
-.separator:before {
-  right: 20px;
-}
 
-.separator.l {
-  margin: 0 auto 30px 0;
-}
-
-.separator.r {
-  margin: 0 0 30px auto;
-}
-
-.separator.l:before {
-  margin-left: 5px;
-}
-
-.separator.r:before {
-  margin-left: -50px;
-}
 
 
 /* ------------------------------
