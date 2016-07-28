@@ -5,23 +5,27 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-h1 {
+.main-title {
   margin: 0 0 30px;
   font: 6.42857em / 1 $primary-font;
   letter-spacing: 5px;
   text-transform: uppercase;
-}
 
-h1 .name {
-  display: block;
-  margin: 0 0 25px;
-  font: 0.35714em / 1 $secondary-font, cursive;
-  letter-spacing: 2px;
-  text-transform: none;
-}
+  @include breakpoint(xs) {
+    font-size: 45px;
+  }
 
-h1 b {
-  font-weight: normal;
+  .name {
+    display: block;
+    margin: 0 0 25px;
+    font: 0.35714em / 1 $secondary-font, cursive;
+    letter-spacing: 2px;
+    text-transform: none;
+  }
+
+  b {
+    font-weight: normal;
+  }
 }
 
 h2 {

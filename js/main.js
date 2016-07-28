@@ -1,5 +1,17 @@
 $(document).ready(function() {
 
+
+    'use strict';
+
+    window.requestAnimFrame = (function(){
+        return window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        function( callback ){
+            window.setTimeout(callback, 1000 / 60);
+        };
+    })();
+
     /*===========================
     =            WOW            =
     ===========================*/
@@ -212,92 +224,4 @@ $(document).ready(function() {
         $(this).css('width', progress + '%');
     });
 
-    /*================================
-    =            Lightbox            =
-    ================================*/
-    $('.btn-lightbox').magnificPopup({
-        type: 'image',
-        mainClass: 'unica',
-        removalDelay: 300
-    });
-
-    $('.gallery').each(function() {
-        $(this).magnificPopup({
-            delegate: 'a',
-            type: 'image',
-            mainClass: 'unica',
-            gallery: {
-                enabled: true
-            },
-            removalDelay: 300
-        });
-    });
-
-    /*=================================
-    =            Portfolio            =
-    =================================*/
-    $('.works').shuffle({
-        itemSelector: '.works-item',
-        gutterWidth: 30
-    });
-
-    $('.filter li').on('click', function() {
-        var $this = $(this),
-        isActive = $this.hasClass( 'active' ),
-        group = isActive ? 'all' : $this.data('group');
-        if ( !isActive ) {
-            $('.filter .active').removeClass('active');
-        }
-        $this.toggleClass('active');
-        $('.works').shuffle( 'shuffle', group );
-    });
-
-    $('.filtered .works-item-link').magnificPopup({
-        type: 'inline',
-        gallery: {
-            enabled: true
-        },
-        mainClass: 'unica',
-        removalDelay: 300
-    });
-
-    /*=================================
-    =            Slideshow            =
-    =================================*/
-    $('.slideshow').owlCarousel({
-        singleItem: true,
-        autoPlay: true,
-        theme: 'owl-unica',
-        transitionStyle: 'UnicaAnim',
-        navigationText: ['', '']
-    });
-
-    $('.clients').owlCarousel({
-        items: 5,
-        autoPlay: true,
-        theme: 'owl-unica',
-        pagination: false
-    });
-
-    /*=======================================
-    =            Form validation            =
-    =======================================*/
-    $('.contact-form').validate({
-        errorClass: 'input--error',
-        validClass: 'input--success',
-        errorPlacement: function() {
-            return true;
-        },
-        highlight: function(element, errorClass) {
-            $(element).parents('.input').addClass(errorClass);
-        },
-        unhighlight: function(element, errorClass) {
-            $(element).parents('.input').removeClass(errorClass);
-        },
-        rules: {
-            email: {
-                email: true
-            }
-        }
-    });
 });

@@ -1,0 +1,32 @@
+/* -----------------------------------------
+ * Breakpoints of love <3
+ * -------------------------------------- */
+
+/* Value map */
+$breakpoints: (
+  'xs':  ( max-width: 767px  ),
+  'sm':  ( max-width: 991px ),
+  'md':  ( min-width: 992px ), /* and ( max-width: 1209px ) ), Yep, you can do that :D */
+  'lg':  ( min-width: 1210px ),
+  // 'custom': ( min-height:  40em )
+);
+
+/* Function */
+@mixin breakpoint($name) {
+      @if map-has-key($breakpoints, $name) {
+        @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+  @else {
+    @warn "Não foi possível encontrar um breakpoint com o nome `#{$name}`.";
+  }
+}
+
+/* How to use:
+ * @include breakpoint( your breakpoint variable here )
+ *
+ * Example how to include:
+ * @include breakpoint(xs) {}
+ * @include breakpoint(sm) {}
+ * ----------------------------------------------------- */

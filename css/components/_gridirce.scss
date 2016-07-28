@@ -216,12 +216,17 @@ $column--width: (100%/$column--number) - 2*$margin !default;
   @extend %row;
 }
 
+// cols 1 - 12
 @for $i from 1 through 12 {
   .col-#{$i} {
     @extend %col-#{$i};
   }
 }
 
+
+
+
+// offsets
 @for $i from 1 through 11 {
   .offset-#{$i} {
     @extend %offset-#{$i};
