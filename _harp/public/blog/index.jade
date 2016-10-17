@@ -10,7 +10,7 @@
     for post in public.blog._data
       a.blog__link(href='/blog/#{ post.path }' title='Ver o post #{ post.title }')
         article.blog__post
-          span.sr-only(itemprop='author') Luiz Felipe Tartarotti Fialho
+          span.sr-only(itemprop='author') André Mendes
           time.date(itemprop='dateCreated') #{ post.date }
           h1.blog--title(itemprop='name') #{ post.title }
           p.blog--text(itemprop='description') #{ post.description }
