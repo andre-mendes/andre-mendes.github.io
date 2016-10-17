@@ -1,0 +1,18 @@
+{
+  "dark-theme-no-dev-tools": {
+    "cover": "dark-theme-chrome.png",
+    "cover_alt": "Tema escuro no DevTools do Chrome",
+    "path":"2016/dark-theme-no-dev-tools",
+    "date": "05/10/2016",
+    "title": "Dark Theme no DevTools",
+    "description": "Que tal deixar o seu DevTools com o tema escuro?"
+  },
+  "sobre-wai-aria-acessibilidade-e-semantica": {
+    "cover": "sobre-role-e-semantica.png",
+    "cover_alt": "Imagem de código demonstrando a semântica de um logo",
+    "path":"2016/sobre-wai-aria-acessibilidade-e-semantica",
+    "date": "14/09/2016",
+    "title": "Sobre WAI-ARIA, acessibilidade e semântica",
+    "description": "WAI-ARIA já é um assunto bem antigo. Porém, observo que muitas pessoas desconhecem sua existência ou não sabem como utilizar nos projetos."
+  }
+}

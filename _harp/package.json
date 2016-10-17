@@ -1,0 +1,30 @@
+{
+  "name": "andre",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andre-mendes/andre-mendes.github.io.git"
+  },
+  "author": "Andre Mendes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andre-mendes/andre-mendes.github.io/issues"
+  },
+  "homepage": "https://github.com/andre-mendes/andre-mendes.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.17.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-harp": "0.0.4",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-stylus": "^2.5.0",
+    "gulp-uglify": "^2.0.0"
+  }
+}

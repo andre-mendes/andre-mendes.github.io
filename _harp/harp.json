@@ -1,0 +1,25 @@
+{
+  "domains": ["andre-mendes.github.io"],
+
+  "language": "en",
+
+  "globals": {
+
+    "site_title": "André Mendes - Front-End Developer",
+
+    "description": "Personal website focused in Front-End and my personal projects.",
+
+    "twitter": "mendes_adc",
+    "facebook": "mdc.andre",
+    "github": "andre-mendes",
+
+    "site_url": "andre-mendes.github.io",
+
+    "sitemap": {
+      "enabled": true,
+      "changefreq": "daily"
+    },
+
+    "copy": [".gitignore", "README.md", "CNAME"]
+  }
+}

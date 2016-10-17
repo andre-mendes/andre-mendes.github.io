@@ -1,0 +1,27 @@
+!= partial("../_partials/head.jade")
+
+  body
+
+    - var postCount = 0
+    if (current.source !== 'index' && public.blog._data)
+      for post, slug in public.blog._data
+
+        if slug == current.source
+
+          //- Blog list
+          //- ===================
+          div(class="container")
+
+          h2: a(href="/blog/#{ slug }")= post.title
+          != partial("blog/" + slug)
+
+          p olar mezamigo
+
+        - postCount++;
+
+    else
+      != yield
+
+
+    #footer
+      p Copyright (c) foobar
