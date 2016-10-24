@@ -6,8 +6,15 @@ var uglify = require('gulp-uglify');
 var htmlmin = require('gulp-htmlmin');
 var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync');
-// var harp = require('gulp-harp');
+var harp = require('harp');
 
+var reload = browserSync.reload;
+
+function refresh() {
+  setTimeout(function () {
+    reload();
+  }, 500);
+}
 
 //Src paths
 var srcPaths = {
@@ -17,6 +24,8 @@ var srcPaths = {
   img: 'public/_src/img/**/*',
   harp: [
     'public/**/*.jade',
+    'public/**/*.styl',
+    'public/**/*.js',
     'public/**/*.md',
     'public/**/*.json'
   ],
@@ -76,27 +85,7 @@ gulp.task('watch', function() {
 })
 
 
-// Browser Sync
-// gulp.task('serve', function() {
-
-//   harp.server(__dirname, {
-//     port: 9000
-//   }, function () {
-
-//     browserSync({
-//       proxy: 'localhost:9000'
-//     });
-
-//     gulp.watch(srcPaths.harp, function () { reload(); });
-
-//     gulp.watch(srcPaths.css, ['css']);
-//     gulp.watch(srcPaths.img, ['images']);
-//     gulp.watch(srcPaths.js, ['js']);
-
-//   });
-// });
-
-gulp.task('browser-sync', function() {
+gulp.task('serve', function() {
   harp.server(__dirname, {
     port: 9000
   }, function () {
@@ -107,9 +96,9 @@ gulp.task('browser-sync', function() {
 
     gulp.watch(srcPaths.harp, function () { reload(); });
 
-    gulp.watch(srcPaths.css, ['css']);
-    gulp.watch(srcPaths.js, ['js']);
-    gulp.watch(srcPaths.img, ['images']);
+    gulp.watch('_src/*.html', { debounceDelay: 300 }, ['minify']);
+    gulp.watch(srcPaths.css, ['compress']);
+    gulp.watch(srcPaths.js, ['scripts']);
 
   });
 });
@@ -122,7 +111,7 @@ gulp.task('default', [
   'imageMin',
   'scripts',
   'watch',
-  'browser-sync'
+  'serve'
 ]);
 
 
