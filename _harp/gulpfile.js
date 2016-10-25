@@ -6,7 +6,11 @@ var uglify = require('gulp-uglify');
 var htmlmin = require('gulp-htmlmin');
 var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync');
+var gcmq = require('gulp-group-css-media-queries');
 var harp = require('harp');
+var rupture = require('rupture');
+
+
 
 var reload = browserSync.reload;
 
@@ -41,11 +45,13 @@ var buildPaths = {
 
 
 //compress Stylus
-gulp.task('compress', function () {
-  return gulp.src(srcPaths.styl)
+gulp.task('css', function () {
+  gulp.src(srcPaths.styl)
     .pipe(stylus({
+      use: [rupture()],
       compress: true
     }))
+    .pipe(gcmq())
     .pipe(gulp.dest(buildPaths.css));
 });
 
@@ -80,7 +86,7 @@ gulp.task('minify', function() {
 //Watch for changes
 gulp.task('watch', function() {
   gulp.watch('_src/*.html', { debounceDelay: 300 }, ['minify']);
-  gulp.watch(srcPaths.styl, ['compress']);
+  gulp.watch(srcPaths.styl, ['css']);
   gulp.watch(srcPaths.js, ['scripts']);
 })
 
@@ -97,7 +103,7 @@ gulp.task('serve', function() {
     gulp.watch(srcPaths.harp, function () { reload(); });
 
     gulp.watch('_src/*.html', { debounceDelay: 300 }, ['minify']);
-    gulp.watch(srcPaths.css, ['compress']);
+    gulp.watch(srcPaths.css, ['css']);
     gulp.watch(srcPaths.js, ['scripts']);
 
   });
@@ -106,7 +112,7 @@ gulp.task('serve', function() {
 
 // Default gulp task to watch
 gulp.task('default', [
-  'compress',
+  'css',
   'minify',
   'imageMin',
   'scripts',
@@ -117,7 +123,7 @@ gulp.task('default', [
 
 //Default gulp task to run
 gulp.task('build', [
-  'compress',
+  'css',
   'minify',
   'imageMin',
   'scripts',
