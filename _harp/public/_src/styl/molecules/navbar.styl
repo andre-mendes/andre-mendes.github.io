@@ -1,0 +1,35 @@
+.navbar
+  li
+    display: inline-block;
+
+.navbar__link
+  letter-spacing 3.6px
+  color #fff
+  text-transform uppercase
+  font-family $primary-font
+  margin 0 15px
+  position relative
+  text-decoration none
+  transition all .2s
+
+  //&:hover
+  //  box-shadow: 0px 2px 0px #D72323;
+
+  &:after, &:before
+    content attr(data-title)
+    position absolute
+    left 0
+    height 100%
+    width 100%
+
+  &:hover:after
+    -webkit-animation: line-glitch .3s cubic-bezier(.25,.46,.45,.94) reverse infinite;// hide 10s linear infinite
+    animation: line-glitch .3s cubic-bezier(.25, .46, .45, .94) reverse infinite;// hide 10s linear infinite
+    color #f0f
+    z-index -1
+
+  &:hover:before
+    -webkit-animation: line-glitch .3s cubic-bezier(.25,.46,.45,.94) infinite;// hide 10s linear infinite;
+    animation: line-glitch .3s cubic-bezier(.25, .46, .45, .94) infinite;// hide 10s linear infinite
+    color #0ff
+    z-index -2
