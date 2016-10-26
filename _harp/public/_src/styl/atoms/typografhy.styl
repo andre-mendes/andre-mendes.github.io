@@ -2,7 +2,6 @@
 //title
 .title__home
   font-family 'Roboto Condensed', Times, Georgia, serif
-  font-size 3.15rem
   line-height 1
   color #fff
   text-align center
@@ -10,6 +9,12 @@
   text-transform uppercase
   margin-top 15%
   margin-bottom 0
+
+  +above(md)
+    font-size 7rem
+
+  +below(md)
+    font-size 4rem
 
 
 .title--glitch span

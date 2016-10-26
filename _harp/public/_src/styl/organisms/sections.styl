@@ -9,14 +9,11 @@ $section__block
   position relative
 
 
-
-
-
-// Diagonal style for sections start and end
+// Diagonal style for sections top and bottom
 //------------------------------------------
 $diagonal-style
   content ''
-  background-color $secondary-color
+  background-color $secondary-color--dark
   display block
   height 80px
   position absolute
@@ -28,9 +25,10 @@ $diagonal-style
   -webkit-transform-style preserve-3d
   -moz-transform-style preserve-3d
 
+
 //  Diagonal section start
 //------------------------------------------
-.section--top
+$section--top
   position relative
 
   &:before
@@ -39,9 +37,10 @@ $diagonal-style
     top -78px
 
 
+
 //  Diagonal section end
 //------------------------------------------
-.section--bottom
+$section--bottom
   position relative
 
   &:after

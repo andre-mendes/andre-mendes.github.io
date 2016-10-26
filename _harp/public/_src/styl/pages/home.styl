@@ -3,8 +3,9 @@
 //------------------------------------------
 .section__home
   @extend $section__block
-  background url('../img/home-bg1.jpg')
+  background url('../img/home-bg1.jpg') center
   background-size cover
+  background-attachment fixed
   display flex
   justify-content center
   align-items center
@@ -14,6 +15,6 @@
 // Section About
 //------------------------------------------
 .section__about
-  @extend $section__block
-  background-color $secondary-color
+  @extend $section__block, $section--top, $section--bottom
+  background-color $secondary-color--dark
   //background linear-gradient($primary-color 55%, $secondary-color)
