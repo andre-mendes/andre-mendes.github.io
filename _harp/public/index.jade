@@ -1,41 +1,56 @@
-main
-  section.section__home
-    h1.title__large welcome to my
-      strong
-        span.title--glitch(data-title="p") p
-        span.title--glitch(data-title="l") l
-        span.title--glitch(data-title="a") a
-        span.title--glitch(data-title="y") y
-        span.title--glitch(data-title="g") g
-        span.title--glitch(data-title="r") r
-        span.title--glitch(data-title="o") o
-        span.title--glitch(data-title="u") u
-        span.title--glitch(data-title="n") n
-        span.title--glitch(data-title="d") d
-    h2.caption Creative and unique Front-end developer
 
 
-  section#about.section__about.section--top
-    div.overlay
-    div.avatar__block
-      //-img.responsive-img.avatar--img(src="https://avatars3.githubusercontent.com/u/15808041" alt="André Mendes")
+//- Home
+//---------------------------------------
+section.section__home
+  h1.title__home.title--glitch welcome to my
+    strong
+      span(data-glitch="p") p
+      span(data-glitch="l") l
+      span(data-glitch="a") a
+      span(data-glitch="y") y
+      span(data-glitch="g") g
+      span(data-glitch="r") r
+      span(data-glitch="o") o
+      span(data-glitch="u") u
+      span(data-glitch="n") n
+      span(data-glitch="d") d
 
-      div.section__title
-        h1
-          span(data-title="A") A
-          span(data-title="n") n
-          span(data-title="d") d
-          span(data-title="r") r
-          span(data-title="é") é
-          br
-          span(data-title="M") M
-          span(data-title="e") e
-          span(data-title="n") n
-          span(data-title="d") d
-          span(data-title="e") e
-          span(data-title="s") s
-        h2.subtitle Front End UI-Engineer
-        p.flow-text
-          A highly motivated guy, graduated in advertising with experience in Design
-          and Development. I've worked with several larger and smaller brands and
-          I am a fan of a good challenge and open source enthusiastic.
+  h2.caption Creative and unique Front-end developer
+
+
+
+//- About
+//---------------------------------------
+section#about.section__about.section--top.section--bottom
+  div.avatar__block(itemscope="" itemtype='http://schema.org/Person')
+    img.img__avatar(src="https://avatars3.githubusercontent.com/u/15808041" alt="André Mendes")
+
+    div.section__title
+      h1.name #[em(itemprop='name') André Mendes]
+      h2.subtitle #[strong(itemprop='jobTitle') Front-End Developer]
+      p.flow-text
+        A highly motivated guy, graduated in advertising with experience in Design
+        and Development. I've worked with several larger and smaller brands and
+        I am a fan of a good challenge and open source enthusiastic.
+
+
+//- Blog
+//---------------------------------------
+section.blog(lang='pt-br')
+
+  header.wellness
+    h2.title Blog
+
+  - var postCount = 0
+  for post in public.blog._data
+    if postCount < 2
+      a.blog__link(href='/blog/#{ post.path }' title='Ver o post #{ post.title }')
+        article.blog__post
+          time.date #{ post.date }
+          h1.blog--title #{ post.title }
+          p.blog--text #{ post.description }
+
+    - postCount++;
+
+  a.btn-link(href='/blog/' title='View more posts') Did you like it? View more posts!

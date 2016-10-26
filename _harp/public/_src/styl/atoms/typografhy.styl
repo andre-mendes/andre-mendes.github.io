@@ -1,0 +1,71 @@
+
+//title
+.title__home
+  font-family 'Roboto Condensed', Times, Georgia, serif
+  font-size 3.15rem
+  line-height 1
+  color #fff
+  text-align center
+  font-weight 300
+  text-transform uppercase
+  margin-top 15%
+  margin-bottom 0
+
+
+.title--glitch span
+  font-style normal
+  line-height: 1
+  color #fff
+  position relative;
+  z-index 1
+
+  &:after, &:before
+    content attr(data-glitch)
+    position absolute
+    left 0
+    height 100%
+    width 100%
+    line-height 1
+
+  &:after
+    -webkit-animation glitch 4s cubic-bezier(.25,.46,.45,.94) reverse infinite // hide 10s linear infinite
+    animation glitch 4s cubic-bezier(.25, .46, .45, .94) reverse infinite // hide 10s linear infinite
+    color #f0f
+    z-index -1
+
+  &:before
+    -webkit-animation: glitch 4s cubic-bezier(.25,.46,.45,.94) infinite // hide 10s linear infinite;
+    animation: glitch 4s cubic-bezier(.25, .46, .45, .94) infinite // hide 10s linear infinite
+    color #0ff
+    z-index -2
+
+
+.caption
+  color #fff
+  font-family 'Roboto Condensed', Times, Georgia, serif
+  font-size 22px
+  letter-spacing 2px
+  text-transform uppercase
+  margin 0
+
+
+.subtitle
+  color #B0976D
+  font-size 3rem
+  font-family $primary-font--condensed
+
+
+.flow-text
+  font-family $primary-font
+  color #fff
+  font-size 1.6rem
+  line-height 28px
+
+
+.name
+  font-family: 'Playfair Display',Times,Georgia,serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 8rem;
+  line-height: 1;
+  color: #fff;

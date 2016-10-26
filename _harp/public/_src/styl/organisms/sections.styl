@@ -1,0 +1,50 @@
+// Section base
+//------------------
+$section__block
+  width 100%
+  margin 0 auto
+  padding 10% 15%
+  min-height calc(100vh + 86px)
+  box-sizing border-box
+  position relative
+
+
+
+
+
+// Diagonal style for sections start and end
+//------------------------------------------
+$diagonal-style
+  content ''
+  background-color $secondary-color
+  display block
+  height 80px
+  position absolute
+  left 0
+  right 0
+  outline 1px solid transparent
+  transform: skewY(-3deg)
+  transform-origin 100%
+  -webkit-transform-style preserve-3d
+  -moz-transform-style preserve-3d
+
+//  Diagonal section start
+//------------------------------------------
+.section--top
+  position relative
+
+  &:before
+    @extend $diagonal-style
+    box-shadow: 0 -8px 9px 0 rgba(0,0,0,0.2),0 -6px 8px 0 rgba(0,0,0,0.19)
+    top -78px
+
+
+//  Diagonal section end
+//------------------------------------------
+.section--bottom
+  position relative
+
+  &:after
+    @extend $diagonal-style
+    box-shadow: 0 8px 9px 0 rgba(0,0,0,0.2),0 6px 8px 0 rgba(0,0,0,0.19)
+    bottom 1px
