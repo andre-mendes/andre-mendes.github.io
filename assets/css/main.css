@@ -1081,10 +1081,6 @@ select {
   }
 }
 
-html {
-  font-size: 10px;
-}
-
 .avatar__block {
   display: flex;
   align-items: center;
@@ -1096,11 +1092,57 @@ html {
   max-width: 300px;
 }
 
+.avatar__subtitle {
+  color: #b0976d;
+  font-size: 3rem;
+  font-family: 'Roboto Condensed',Times,Georgia,serif;
+}
+
+.avatar__name {
+  font-family: 'Playfair Display SC',Times,Georgia,serif;
+  font-weight: 400;
+  font-size: 8rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.btn--link {
+  font-size: 1.6rem;
+  font-family: 'Roboto Mono',Times,Georgia,serif;
+  color: #052850;
+  transition: all .2s;
+  text-decoration: none;
+}
+
+.btn--link:hover {
+  color: #09468c;
+  box-shadow: 0 3px 0 #09468c;
+}
+
+html {
+  font-size: 10px;
+}
+
+.section {
+  padding: 10rem 1.5rem;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title,
 .title__home {
   font-family: 'Roboto Condensed',Times,Georgia,serif;
-  line-height: 1;
-  color: #fff;
+  color: #370e69;
   text-align: center;
+}
+
+.title {
+  font-size: 4rem;
+  margin: 6rem 0 3rem;
+}
+
+.title__home {
   font-weight: 300;
   text-transform: uppercase;
   margin-top: 15%;
@@ -1113,6 +1155,7 @@ html {
   color: #fff;
   position: relative;
   z-index: 1;
+  text-shadow: 1px 1px 1px #370e69;
 }
 
 .title--glitch span:after,
@@ -1140,18 +1183,13 @@ html {
 }
 
 .caption {
-  color: #fff;
+  color: #370e69;
   font-family: 'Roboto Condensed',Times,Georgia,serif;
-  font-size: 22px;
-  letter-spacing: 2px;
+  font-size: 2.2rem;
+  letter-spacing: .2rem;
   text-transform: uppercase;
+  font-weight: 300;
   margin: 0;
-}
-
-.subtitle {
-  color: #b0976d;
-  font-size: 3rem;
-  font-family: 'Roboto Condensed',Times,Georgia,serif;
 }
 
 .flow-text {
@@ -1161,13 +1199,58 @@ html {
   line-height: 28px;
 }
 
-.name {
-  font-family: 'Playfair Display',Times,Georgia,serif;
+.date {
+  font-size: 1.2rem;
+  color: #1c1d21;
+  font-weight: 700;
+  font-family: 'Poppins',Arial;
+}
+
+.logo {
+  font-size: 2rem;
+  font-family: 'Roboto Mono',Times,Georgia,serif;
+  color: #1c1d21;
+  opacity: .2;
+  transition: all .2s;
+  text-decoration: none;
+}
+
+.logo:hover {
+  opacity: 1;
+  color: #370e69;
+}
+
+.blog__link {
+  margin: 5rem 0;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+  padding: 4.5rem 3rem;
+  text-decoration: none;
+  font-family: 'Roboto Mono',Times,Georgia,serif;
+  transition: all .3s;
+}
+
+.blog__link:hover {
+  border-color: #f6f0fd;
+  box-shadow: 0 5px 10px #ede2fb;
+}
+
+.blog--title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 2.8rem;
+  color: #370e69;
+  margin: 10px 0;
+}
+
+.blog--text {
+  font-size: 1.8rem;
+  line-height: 2rem;
   font-weight: 400;
-  font-style: normal;
-  font-size: 8rem;
-  line-height: 1;
-  color: #fff;
+  color: #3a4750;
 }
 
 .navbar li {
@@ -1176,7 +1259,7 @@ html {
 
 .navbar__link {
   letter-spacing: 3.6px;
-  color: #fff;
+  color: #370e69;
   text-transform: uppercase;
   font-family: 'Roboto Mono',Times,Georgia,serif;
   margin: 0 15px;
@@ -1184,6 +1267,7 @@ html {
   text-decoration: none;
   transition: all .2s;
   font-size: 1.5rem;
+  font-weight: 300;
 }
 
 .navbar__link:after,
@@ -1217,6 +1301,7 @@ html {
   background-color: #370e69;
   text-align: center;
   position: relative;
+  font-family: 'Roboto Mono',Times,Georgia,serif;
 }
 
 .footer:before {
@@ -1227,18 +1312,18 @@ html {
   left: 0;
   right: 0;
   outline: 1px solid transparent;
-  transform: skewY(-2deg);
+  transform: skewY(-3deg);
   transform-origin: 100%;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
-  height: 30px;
+  height: 70px;
   box-shadow: 0 -8px 9px 0 rgba(0,0,0,0.2),0 -6px 8px 0 rgba(0,0,0,0.19);
-  top: -30px;
+  top: -70px;
 }
 
 .header__block {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 20px 5%;
   position: fixed;
@@ -1246,6 +1331,8 @@ html {
   top: 0;
   z-index: 10;
   box-sizing: border-box;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  background: #fff;
 }
 
 .section__home,
@@ -1293,9 +1380,6 @@ html {
 }
 
 .section__home {
-  background: url("../img/home-bg1.jpg") center;
-  background-size: cover;
-  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,6 +1,10 @@
-!= partial("../_partials/head.jade")
+doctype
+html
+!= partial("../_partials/head")
 
   body
+    != partial("../_partials/header")
+
 
     - var postCount = 0
     if (current.source !== 'index' && public.blog._data)
@@ -23,5 +27,4 @@
       != yield
 
 
-    #footer
-      p Copyright (c) foobar
+    != partial("../_partials/footer")
