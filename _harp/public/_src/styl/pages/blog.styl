@@ -28,24 +28,29 @@
     width auto
     max-width 85rem
     margin 0 auto 3rem
-    font-size 2.2rem
+    font-size 2.4rem
     line-height 2
+    padding 0 1.5rem
     color $grey
     letter-spacing .01rem
     box-sizing border-box
+    font-family 'Open Sans'
 
 
   // Code
   pre
     width 100%
-    font-size 1.8rem
-    padding 2.5rem 0
-    margin 4.5rem auto
-    background darken($grey-dark, 15%)
+    font-size 2rem
+    padding 2.5rem 1.5rem
+    margin 10rem auto
+    box-sizing: border-box;
+    background #333e4b
+    //background darken($grey-dark, 15%)
 
     code
       color #a6e22e
-      max-width 85rem
+      max-width 105rem
+      box-sizing border-box
       margin 2rem auto
       display block
       line-height 1.5
@@ -67,10 +72,13 @@
   //blockquote
   blockquote
     max-width 85rem
-    margin 4rem auto
+    margin 6rem auto
     border-left 5px solid $secondary-color--light
     padding-left 3rem
     box-sizing border-box
     background lighten($grey-light, 45%)
+    +below(md)
+      margin 6rem .5rem
+      padding-left 0rem
 
 

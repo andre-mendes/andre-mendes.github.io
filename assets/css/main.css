@@ -33,7 +33,7 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #998066;
+  color: #708090;
 }
 
 .token.punctuation {
@@ -1350,6 +1350,7 @@ html {
 .blog__link:hover {
   border-color: #f6f0fd;
   box-shadow: 0 5px 10px #ede2fb;
+  box-shadow: 0 5px 10px rgba(139,152,190,0.2);
 }
 
 .blog__title {
@@ -1393,12 +1394,24 @@ html {
   box-shadow: 0 3px 0 #52159d;
 }
 
+.social-media {
+  list-style: none;
+  margin-top: 3rem;
+  display: flex;
+}
+
+.social-media__link {
+  font-size: 3rem;
+  color: #fff;
+  margin-right: 1.5rem;
+}
+
 .footer {
   font-size: 1.5rem;
   height: 80px;
   line-height: 80px;
   color: #fff;
-  background-color: #370e69;
+  background-color: #042244;
   text-align: center;
   position: relative;
   font-family: 'Roboto Mono',Times,Georgia,serif;
@@ -1411,7 +1424,7 @@ html {
 
 .footer:before {
   content: '';
-  background-color: #370e69;
+  background-color: #042244;
   display: block;
   position: absolute;
   left: 0;
@@ -1485,17 +1498,6 @@ html {
   bottom: 1px;
 }
 
-.section__home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.section__about {
-  background-color: #042244;
-}
-
 .post__content {
   font-family: 'Roboto Mono',Times,Georgia,serif;
   padding: 15rem 0;
@@ -1541,24 +1543,28 @@ html {
   width: auto;
   max-width: 85rem;
   margin: 0 auto 3rem;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   line-height: 2;
+  padding: 0 1.5rem;
   color: #3a4750;
   letter-spacing: .01rem;
   box-sizing: border-box;
+  font-family: 'Open Sans';
 }
 
 .post__content pre {
   width: 100%;
-  font-size: 1.8rem;
-  padding: 2.5rem 0;
-  margin: 4.5rem auto;
-  background: #18191c;
+  font-size: 2rem;
+  padding: 2.5rem 1.5rem;
+  margin: 10rem auto;
+  box-sizing: border-box;
+  background: #333e4b;
 }
 
 .post__content pre code {
   color: #a6e22e;
-  max-width: 85rem;
+  max-width: 105rem;
+  box-sizing: border-box;
   margin: 2rem auto;
   display: block;
   line-height: 1.5;
@@ -1583,11 +1589,24 @@ html {
 
 .post__content blockquote {
   max-width: 85rem;
-  margin: 4rem auto;
+  margin: 6rem auto;
   border-left: 5px solid #09468c;
   padding-left: 3rem;
   box-sizing: border-box;
   background: #f6f6f6;
+}
+
+.section__home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section__about {
+  background-color: #042244;
+  display: flex;
+  align-items: center;
 }
 
 @media only screen and (min-width:990px) {
@@ -1605,8 +1624,17 @@ html {
     margin-bottom: 4rem;
   }
 
+  html {
+    font-size: 8px;
+  }
+
   .title__home {
     font-size: 4rem;
+  }
+
+  .post__content blockquote {
+    margin: 6rem .5rem;
+    padding-left: 0;
   }
 }
 
