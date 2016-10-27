@@ -1,12 +1,16 @@
 .footer
   font-size 1.5rem
-  height 100px
-  line-height 100px
+  height 80px
+  line-height 80px
   color #fff
   background-color $primary-color
   text-align center
   position relative
   font-family $primary-font
+
+  .heart
+    color #FA4659
+    font-size: 1.7rem;
 
   &:before
     content ''
@@ -16,11 +20,14 @@
     left 0
     right 0
     outline 1px solid transparent
-    transform: skewY(-3deg)
+    transform: skewY(-2deg)
     transform-origin 100%
     -webkit-transform-style preserve-3d
     -moz-transform-style preserve-3d
     height 70px
     box-shadow: 0 -8px 9px 0 rgba(0,0,0,0.2),0 -6px 8px 0 rgba(0,0,0,0.19)
     top -70px
+    z-index -1
 
+// #E8F1F5
+// box-shadow: 0px 1px 1px 0px rgba(0,0,102,0.1);

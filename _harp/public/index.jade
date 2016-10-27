@@ -29,7 +29,10 @@ section#about.section__about
     div.section__title
       h1.avatar__name(itemprop='name') André Mendes
       h2.avatar__subtitle #[strong(itemprop='jobTitle') Front-End Developer]
-      p.flow-text A highly motivated guy, graduated in advertising with experience in Design and Development. I've worked with several larger and smaller brands and I am a fan of a good challenge and open source enthusiastic.
+      p.flow-text
+        | A highly motivated guy, graduated in advertising with experience in
+        | Design and Development. I've worked with several larger and smaller
+        | brands and I am a fan of a good challenge and open source enthusiastic.
 
 
 //- Blog
@@ -39,15 +42,15 @@ section.section(lang='pt-br')
   header.blog
     h2.title Projects, thoughts, everything...
 
-    - var postCount = 0
-    for post in public.blog._data
-      if postCount < 3
-        a.blog__link(href='/blog/#{ post.path }' title='Ver o post #{ post.title }'
-          itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost")
-          article.blog__post
-            time.date #{ post.date }
-            h1.blog--title #{ post.title }
-            p.blog--text #{ post.description }
+  - var postCount = 0
+  for post in public.blog._data
+    if postCount < 3
+      a.blog__link(href='/blog/#{ post.path }' title='Ver o post #{ post.title }'
+        itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost")
+        article.blog__post
+          time.date #{ post.date }
+          h1.blog--title #{ post.title }
+          p.blog--text #{ post.description }
 
       - postCount++;
 

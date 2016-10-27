@@ -14,23 +14,26 @@
   font-size 1.5rem
   font-weight 300
 
+  &:hover
+    box-shadow 0 3px 0 $primary-color--light
+
   // Hover
   //---------------
-  &:after, &:before
-    content attr(data-title)
-    position absolute
-    left 0
-    height 100%
-    width 100%
+  // &:after, &:before
+  //   content attr(data-title)
+  //   position absolute
+  //   left 0
+  //   height 100%
+  //   width 100%
 
-  &:hover:after
-    -webkit-animation: line-glitch .3s cubic-bezier(.25,.46,.45,.94) reverse infinite;// hide 10s linear infinite
-    animation: line-glitch .3s cubic-bezier(.25, .46, .45, .94) reverse infinite;// hide 10s linear infinite
-    color #f0f
-    z-index -1
+  // &:hover:after
+  //   -webkit-animation: line-glitch .3s cubic-bezier(.25,.46,.45,.94) reverse infinite;// hide 10s linear infinite
+  //   animation: line-glitch .3s cubic-bezier(.25, .46, .45, .94) reverse infinite;// hide 10s linear infinite
+  //   color #f0f
+  //   z-index -1
 
-  &:hover:before
-    -webkit-animation: line-glitch .3s cubic-bezier(.25,.46,.45,.94) infinite;// hide 10s linear infinite;
-    animation: line-glitch .3s cubic-bezier(.25, .46, .45, .94) infinite;// hide 10s linear infinite
-    color #0ff
-    z-index -2
+  // &:hover:before
+  //   -webkit-animation: line-glitch .3s cubic-bezier(.25,.46,.45,.94) infinite;// hide 10s linear infinite;
+  //   animation: line-glitch .3s cubic-bezier(.25, .46, .45, .94) infinite;// hide 10s linear infinite
+  //   color #0ff
+  //   z-index -2
