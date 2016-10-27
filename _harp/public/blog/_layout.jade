@@ -17,6 +17,8 @@ html
           article.blog(itemscope itemtype='http://schema.org/Blog' lang='pt-br')
 
             div.post__content(itemprop='text')
+              h1(itemprop='name') #{ post.title }
+
               != yield
 
 

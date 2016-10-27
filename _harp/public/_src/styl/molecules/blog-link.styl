@@ -9,21 +9,32 @@
   text-decoration none
   font-family $primary-font
   transition all .3s
+  +below(sm)
+    padding 4.5rem 1.5rem
+
   &:hover
     border-color lighten($primary-color--light, 95%)
     box-shadow 0 5px 10px lighten($primary-color--light, 90%)
     box-shadow: 0 5px 10px rgba(139,152,190,0.20);
 
+
+
 .blog__title
   font-size 2.4rem
   font-weight 700
   line-height 2.8rem
-  color $primary-color
+  color $secondary-color
   margin 10px 0
+
+
 
 .blog__author
   font-size 1.6rem
   margin-bottom 0.5rem
+  color $secondary-color
+  opacity 0
+  visibility hidden
+
 
 .blog__text
   font-size 1.8rem

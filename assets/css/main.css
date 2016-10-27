@@ -1247,13 +1247,14 @@ html {
 .title,
 .title__home {
   font-family: 'Roboto Condensed',Times,Georgia,serif;
-  color: #370e69;
+  color: #052850;
   text-align: center;
 }
 
 .title {
   font-size: 4rem;
   margin: 6rem 0 3rem;
+  font-weight: 300;
 }
 
 .title__home {
@@ -1321,16 +1322,18 @@ html {
 }
 
 .logo {
-  font-size: 2rem;
-  font-family: 'Roboto Mono',Times,Georgia,serif;
-  color: #1c1d21;
-  opacity: .2;
-  transition: all .2s;
   text-decoration: none;
 }
 
-.logo:hover {
-  opacity: 1;
+.logo:after {
+  content: 'André Mendes';
+  font-size: 2rem;
+  font-family: 'Roboto Mono',Times,Georgia,serif;
+  color: #8b98be;
+  transition: all .2s;
+}
+
+.logo:hover:after {
   color: #370e69;
 }
 
@@ -1357,13 +1360,16 @@ html {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 2.8rem;
-  color: #370e69;
+  color: #052850;
   margin: 10px 0;
 }
 
 .blog__author {
   font-size: 1.6rem;
   margin-bottom: .5rem;
+  color: #052850;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .blog__text {
@@ -1379,19 +1385,32 @@ html {
 
 .navbar__link {
   letter-spacing: 3.6px;
-  color: #370e69;
+  color: #052850;
   text-transform: uppercase;
   font-family: 'Roboto Mono',Times,Georgia,serif;
   margin: 0 15px;
   position: relative;
   text-decoration: none;
-  transition: all .2s;
+  transition: transform .2s ease-out;
   font-size: 1.5rem;
   font-weight: 300;
 }
 
-.navbar__link:hover {
-  box-shadow: 0 3px 0 #52159d;
+.navbar__link:after {
+  content: " ";
+  width: 100%;
+  height: 2px;
+  background-color: #052850;
+  position: absolute;
+  left: 0;
+  transform: scale3d(0,1,1);
+  transition: ease-out .3s;
+  will-change: transform;
+  bottom: -.5rem;
+}
+
+.navbar__link:hover:after {
+  transform: scale3d(1,1,1);
 }
 
 .social-media {
@@ -1434,9 +1453,8 @@ html {
   transform-origin: 100%;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
-  height: 70px;
-  box-shadow: 0 -8px 9px 0 rgba(0,0,0,0.2),0 -6px 8px 0 rgba(0,0,0,0.19);
-  top: -70px;
+  height: 58px;
+  top: -55px;
   z-index: -1;
 }
 
@@ -1450,7 +1468,7 @@ html {
   top: 0;
   z-index: 10;
   box-sizing: border-box;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  box-shadow: 0 2px 5px 0 rgba(139,152,190,0.16),0 2px 10px 0 rgba(139,152,190,0.12);
   background: #fff;
 }
 
@@ -1464,7 +1482,6 @@ html {
   position: relative;
 }
 
-.section__about:before,
 .section__about:after {
   content: '';
   background-color: #042244;
@@ -1484,17 +1501,7 @@ html {
   position: relative;
 }
 
-.section__about:before {
-  box-shadow: 0 -8px 9px 0 rgba(0,0,0,0.2),0 -6px 8px 0 rgba(0,0,0,0.19);
-  top: -78px;
-}
-
-.section__about {
-  position: relative;
-}
-
 .section__about:after {
-  box-shadow: 0 8px 9px 0 rgba(0,0,0,0.2),0 6px 8px 0 rgba(0,0,0,0.19);
   bottom: 1px;
 }
 
@@ -1509,8 +1516,9 @@ html {
 .post__content h4,
 .post__content h5,
 .post__content h6 {
-  margin: 0 auto 6rem;
-  max-width: 85rem;
+  margin: 10rem auto 6rem;
+  max-width: 90rem;
+  padding: 0 1.5rem;
   box-sizing: border-box;
   color: #09468c;
 }
@@ -1541,9 +1549,9 @@ html {
 
 .post__content p {
   width: auto;
-  max-width: 85rem;
+  max-width: 90rem;
   margin: 0 auto 3rem;
-  font-size: 2.4rem;
+  font-size: 2.1rem;
   line-height: 2;
   padding: 0 1.5rem;
   color: #3a4750;
@@ -1632,6 +1640,11 @@ html {
     font-size: 4rem;
   }
 
+  .section__home,
+  .section__about {
+    padding: 15rem 2rem;
+  }
+
   .post__content blockquote {
     margin: 6rem .5rem;
     padding-left: 0;
@@ -1641,6 +1654,20 @@ html {
 @media only screen and (max-width:989px) {
   .avatar__block {
     flex-direction: column;
+  }
+
+  .blog__link {
+    padding: 4.5rem 1.5rem;
+  }
+
+  .footer:before {
+    top: -20px;
+  }
+}
+
+@media only screen and (max-width:759px) {
+  .logo:after {
+    content: 'A.M.';
   }
 }
 

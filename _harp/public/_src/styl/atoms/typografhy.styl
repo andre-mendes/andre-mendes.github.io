@@ -2,7 +2,7 @@
 //title
 $title
   font-family $primary-font--condensed
-  color $primary-color
+  color $secondary-color
   text-align center
 
 
@@ -10,6 +10,7 @@ $title
   @extend $title
   font-size 4rem
   margin 6rem 0 3rem
+  font-weight 300
 
 
 .title__home
@@ -83,12 +84,15 @@ $title
 
 //Logo
 .logo
-  font-size 2rem
-  font-family $primary-font
-  color $grey-dark
-  opacity .2
-  transition all .2s
   text-decoration none
-  &:hover
-    opacity 1
-    color $primary-color
+  &:after
+    content 'André Mendes'
+    font-size 2rem
+    font-family $primary-font
+    color rgba(139,152,190,1)
+    transition all .2s
+    +below(xs)
+      content 'A.M.'
+
+  &:hover:after
+      color $primary-color

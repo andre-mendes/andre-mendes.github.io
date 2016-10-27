@@ -7,6 +7,8 @@ $section__block
   min-height calc(100vh + 86px)
   box-sizing border-box
   position relative
+  +below(md)
+    padding 15rem 2rem
 
 
 // Diagonal style for sections top and bottom
@@ -33,8 +35,8 @@ $section--top
 
   &:before
     @extend $diagonal-style
-    box-shadow: 0 -8px 9px 0 rgba(0,0,0,0.2),0 -6px 8px 0 rgba(0,0,0,0.19)
     top -78px
+    // box-shadow: 0 -8px 9px 0 rgba(0,0,0,0.2),0 -6px 8px 0 rgba(0,0,0,0.19)
 
 
 
@@ -45,5 +47,5 @@ $section--bottom
 
   &:after
     @extend $diagonal-style
-    box-shadow: 0 8px 9px 0 rgba(0,0,0,0.2),0 6px 8px 0 rgba(0,0,0,0.19)
     bottom 1px
+    // box-shadow: 0 8px 9px 0 rgba(0,0,0,0.2),0 6px 8px 0 rgba(0,0,0,0.19)
