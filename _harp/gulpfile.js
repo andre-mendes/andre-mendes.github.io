@@ -24,7 +24,10 @@ function refresh() {
 var srcPaths = {
   css: 'public/_src/styl/**/*.styl',
   styl: 'public/_src/styl/main.styl',
-  js: 'public/_src/js/**/*.js',
+  js: [
+      'public/_src/js/prism.js',
+      'public/_src/js/**/*.js'
+    ],
   img: 'public/_src/img/**/*',
   harp: [
     'public/**/*.jade',

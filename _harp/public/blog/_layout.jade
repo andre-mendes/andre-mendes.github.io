@@ -12,14 +12,13 @@ html
 
         if slug == current.source
 
-          //- Blog list
+          //- Blog Post
           //- ===================
-          div(class="container")
+          article.blog(itemscope itemtype='http://schema.org/Blog' lang='pt-br')
 
-          h2: a(href="/blog/#{ slug }")= post.title
-          != partial("blog/" + slug)
+            div.post__content(itemprop='text')
+              != yield
 
-          p olar mezamigo
 
         - postCount++;
 

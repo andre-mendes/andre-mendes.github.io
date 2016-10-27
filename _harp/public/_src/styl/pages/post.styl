@@ -1,0 +1,76 @@
+.post__content
+  font-family $primary-font
+  padding 15rem 0
+
+  //Titles
+  h1,h2,h3,h4,h5,h6
+    margin 0 auto 6rem
+    max-width 85rem
+    box-sizing border-box
+    color $secondary-color--light
+
+  h1
+    font-size 8rem
+  h2
+    font-size 4rem
+  h3
+    font-size 3rem
+  h4
+    font-size 2.5rem
+  h5
+    font-size 2.2rem
+  h6
+    font-size 2.1rem
+
+
+  //Normal texts
+  p
+    width auto
+    max-width 85rem
+    margin 0 auto 3rem
+    font-size 2.2rem
+    line-height 2
+    color $grey
+    letter-spacing .01rem
+    box-sizing border-box
+
+
+  // Code
+  pre
+    width 100%
+    font-size 1.8rem
+    padding 2.5rem 0
+    margin 4.5rem auto
+    background darken($grey-dark, 15%)
+
+    code
+      color #a6e22e
+      max-width 85rem
+      margin 2rem auto
+      display block
+      line-height 1.5
+
+  // Link
+  a
+    color $secondary-color--light
+    transition all .2s
+    text-decoration none
+    box-shadow 0 1px 0 $secondary-color--light
+    cursor pointer
+    font-weight 700
+    &:visited
+      color $primary-color--light
+    &:hover
+      box-shadow 0 3px 0 $secondary-color--light
+
+
+  //blockquote
+  blockquote
+    max-width 85rem
+    margin 4rem auto
+    border-left 5px solid $secondary-color--light
+    padding-left 3rem
+    box-sizing border-box
+    background lighten($grey-light, 45%)
+
+
