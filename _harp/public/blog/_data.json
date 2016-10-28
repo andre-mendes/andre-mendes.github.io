@@ -1,28 +1,20 @@
 {
-  "dark-theme-no-dev-tools": {
+  "menu-hamburger-animation-to-X": {
     "cover": "dark-theme-chrome.png",
-    "cover_alt": "Tema escuro no DevTools do Chrome",
-    "path":"2016/dark-theme-no-dev-tools",
-    "date": "05/10/2016",
-    "title": "Dark Theme no DevTools",
-    "description": "Que tal deixar o seu DevTools com o tema escuro?"
+    "cover_alt": "How to make a menu hamburger animation to X",
+    "path":"2016/menu-hamburger-animation-to-X",
+    "date": "28/10/2016",
+    "title": "How to make a menu hamburger animation to X",
+    "description": "Hamburgers icons are pretty fixed on our minds nowadays. So why not give some more life and good expirience to it?"
   },
 
-  "sobre-wai-aria-acessibilidade-e-semantica": {
-    "cover": "sobre-role-e-semantica.png",
-    "cover_alt": "Imagem de código demonstrando a semântica de um logo",
-    "path":"2016/sobre-wai-aria-acessibilidade-e-semantica",
-    "date": "14/09/2016",
-    "title": "Sobre WAI-ARIA, acessibilidade e semântica",
-    "description": "WAI-ARIA já é um assunto bem antigo. Porém, observo que muitas pessoas desconhecem sua existência ou não sabem como utilizar nos projetos."
-  },
-
-  "biluuga": {
-    "cover": "sobre-role-e-semantica.png",
-    "cover_alt": "Imagem de código demonstrando a semântica de um logo",
-    "path":"2016/sobre-wai-aria-acessibilidade-e-semantica",
-    "date": "14/09/2016",
-    "title": "Testando",
-    "description": "WAI-ARIA já é um assunto bem antigo. Porém, observo que muitas pessoas desconhecem sua existência ou não sabem como utilizar nos projetos."
+  "menu-hamburger-animation-to-X-teste": {
+    "cover": "dark-theme-chrome.png",
+    "cover_alt": "How to make a menu hamburger animation to X",
+    "path":"2016/menu-hamburger-animation-to-X",
+    "date": "28/10/2016",
+    "title": "How to make a menu hamburger animation to X",
+    "description": "Hamburgers icons are pretty fixed on our minds nowadays. So why not give some more life and good expirience to it?"
   }
+
 }

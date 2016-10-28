@@ -94,6 +94,22 @@ pre[class*="language-css"] .token.punctuation {
   color: #fff;
 }
 
+pre[class*="language-html"] .token.tag {
+  color: #f92672;
+}
+
+pre[class*="language-html"] .token.punctuation {
+  color: #fff;
+}
+
+pre[class*="language-html"] .token.attr-name {
+  color: #a6e22e;
+}
+
+pre[class*="language-html"] .token.attr-value {
+  color: #f5b83d;
+}
+
 .token.important,
 .token.bold {
   font-weight: bold;
@@ -1520,7 +1536,7 @@ html {
   max-width: 90rem;
   padding: 0 1.5rem;
   box-sizing: border-box;
-  color: #09468c;
+  color: #0c5fbf;
 }
 
 .post__content h1 {
@@ -1529,6 +1545,7 @@ html {
 
 .post__content h2 {
   font-size: 4rem;
+  font-family: 'Open Sans';
 }
 
 .post__content h3 {
@@ -1570,7 +1587,6 @@ html {
 }
 
 .post__content pre code {
-  color: #a6e22e;
   max-width: 105rem;
   box-sizing: border-box;
   margin: 2rem auto;
