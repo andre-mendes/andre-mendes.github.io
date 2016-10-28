@@ -9,13 +9,13 @@ enphasis in the actions. When you open a menu bar, for example, and the button
 icon still the same, you think "oh, if I click here, **probably** I'll close the menu bar".
 
 But, if you see the button icon turn into an **X**, I'm pretty sure that you will
-not think, yeah, **will not think**. You will just close it. Becouse you know
+not think, yeah, **will not think**. You will just close it. Becouse you just know
 this is the close button.
 
 So today, I'm going to show you how to create a simple animation using CSS and a
 small Javascript to make the trigger :)
 
-## First step - Creating the button
+## Creating the button
 
 The first thing to do is create or markup, this is pretty simple. Our parent tag
 will be a **button** with an inner **span** tag. The button will be our container
@@ -27,4 +27,27 @@ This is or markup:
 <button class="menu">
   <span class="menu__icon-bar"></span>
 </button>
+```
+
+Now, we have to reset all the button stles. Remove borders, background colors and
+the others default appearances :)
+
+So we define a width and height of the button (it's interesting to a good area, because
+this will be the touch area in mobile devices).
+
+This is what we have
+
+```css
+.menu {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 96px;
+  height: 96px;
+  appearance: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+}
 ```

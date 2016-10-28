@@ -4,15 +4,33 @@ more life and good expirience to it?</p>
 enphasis in the actions. When you open a menu bar, for example, and the button
 icon still the same, you think &quot;oh, if I click here, <strong>probably</strong> I&#39;ll close the menu bar&quot;.</p>
 <p>But, if you see the button icon turn into an <strong>X</strong>, I&#39;m pretty sure that you will
-not think, yeah, <strong>will not think</strong>. You will just close it. Becouse you know
+not think, yeah, <strong>will not think</strong>. You will just close it. Becouse you just know
 this is the close button.</p>
 <p>So today, I&#39;m going to show you how to create a simple animation using CSS and a
 small Javascript to make the trigger :)</p>
-<h2>First step - Creating the button</h2><p>The first thing to do is create or markup, this is pretty simple. Our parent tag
+<h2>Creating the button</h2><p>The first thing to do is create or markup, this is pretty simple. Our parent tag
 will be a <strong>button</strong> with an inner <strong>span</strong> tag. The button will be our container
 and the spans our bars and our X at the end.</p>
 <p>This is or markup:</p>
 <pre><code class="language-html">&lt;button class=&quot;menu&quot;&gt;
   &lt;span class=&quot;menu__icon-bar&quot;&gt;&lt;/span&gt;
 &lt;/button&gt;
+</code></pre>
+<p>Now, we have to reset all the button stles. Remove borders, background colors and
+the others default appearances :)</p>
+<p>So we define a width and height of the button (it&#39;s interesting to a good area, because
+this will be the touch area in mobile devices).</p>
+<p>This is what we have</p>
+<pre><code class="language-css">.menu {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 96px;
+  height: 96px;
+  appearance: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+}
 </code></pre></div></article><footer class="footer"><p>keep <span class="heart">❤</span> coding</p></footer><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script><script src="https://use.fontawesome.com/c22a7ef303.js"></script><script src="/assets/js/main.js"></script></body>

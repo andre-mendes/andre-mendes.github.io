@@ -82,6 +82,10 @@ pre[class*="language-"] {
   color: #e90;
 }
 
+pre[class*="language-css"] code {
+  color: #ae81ff;
+}
+
 pre[class*="language-css"] .token.selector {
   color: #f92672;
 }
@@ -1584,10 +1588,11 @@ html {
   margin: 10rem auto;
   box-sizing: border-box;
   background: #333e4b;
+  background: #18191c;
 }
 
 .post__content pre code {
-  max-width: 105rem;
+  max-width: 85rem;
   box-sizing: border-box;
   margin: 2rem auto;
   display: block;
