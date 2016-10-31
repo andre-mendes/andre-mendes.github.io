@@ -1,31 +1,22 @@
 .footer
-  font-size 1.5rem
-  height 80px
-  line-height 80px
-  color #fff
   background-color $secondary-color--dark
+  color #fff
+  line-height 90px
+  height 90px
   text-align center
-  position relative
+  font-size 1.5rem
   font-family $primary-font
+  position relative
 
   .heart
     color #FA4659
     font-size: 1.7rem;
 
   &:before
-    content ''
-    background-color $secondary-color--dark
-    display block
-    position absolute
-    left 0
-    right 0
-    outline 1px solid transparent
+    @extend $diagonal-style
     transform: skewY(-2deg)
-    transform-origin 100%
-    -webkit-transform-style preserve-3d
-    -moz-transform-style preserve-3d
     height 58px
     top -55px
     z-index -1
-    +below(sm)
+    +below(xs)
       top -20px
