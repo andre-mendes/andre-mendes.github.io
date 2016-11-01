@@ -1,22 +1,33 @@
 .post__content
   font-family $primary-font
-  padding 15rem 0
+  padding 0 0 15rem 0
 
-  //Titles
-  h1,h2,h3,h4,h5,h6
-    margin 10rem auto  6rem
-    max-width 90rem
+
+  // header
+  .post__header
+    height 100vh
+    width 100%
+    background lighten($secondary-color--light,15%)
+    lost-align center
+
+
+  // Titles
+  h2,h3,h4,h5,h6
+    margin 10rem auto 4rem
+    max-width 80rem
     padding 0 1.5rem
     box-sizing border-box
     color lighten($secondary-color--light,15%)
 
   h1
     font-size 8rem
+    color #fff
   h2
     font-size 4rem
     font-family 'Open Sans'
   h3
     font-size 3rem
+    font-family 'Open Sans'
   h4
     font-size 2.5rem
   h5
@@ -28,7 +39,7 @@
   //Normal texts
   p
     width auto
-    max-width 90rem
+    max-width 80rem
     margin 0 auto 3rem
     font-size 2.1rem
     line-height 2
@@ -43,18 +54,19 @@
   pre
     width 100%
     font-size 2rem
-    padding 2.5rem 1.5rem
+    padding 2.5rem 0;
     margin 10rem auto
     box-sizing: border-box;
     background #333e4b
-    background darken($grey-dark, 15%)
+    // background darken($grey-dark, 15%)
 
     code
       // color #a6e22e
-      max-width 85rem
       box-sizing border-box
-      margin 2rem auto
+      padding 0 1.5rem
       display block
+      max-width 80rem
+      margin 2rem auto
       line-height 1.5
 
   // Link
@@ -67,6 +79,11 @@
     font-weight 700
     &:visited
       color $primary-color--light
+      box-shadow-color $primary-color--light
+      &:hover
+        $primary-color--light
+        box-shadow 0 3px 0 $primary-color--light
+
     &:hover
       box-shadow 0 3px 0 $secondary-color--light
 

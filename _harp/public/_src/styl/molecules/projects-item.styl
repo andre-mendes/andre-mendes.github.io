@@ -1,0 +1,51 @@
+@lost flexbox flex
+@lost gutter 3rem
+
+/*
+ * Project
+ * ---------------------------------- */
+.project-grid
+  lost-flex-container row
+  +below(xs)
+    lost-flex-container column
+
+.project
+  lost-column 1/3
+  padding 1rem
+  box-sizing border-box
+
+  &__title
+    font-size 1.8rem
+    color $secondary-color--dark
+    font-family $primary-font
+
+  &__picture
+    width 100%
+    margin 2rem 0
+    display: block;
+
+  &__description
+    font-size 1.6rem
+    color $grey
+    font-family $secondary-font
+    margin-bottom 2rem
+
+
+.lost-grid
+  margin-top 15rem
+  height 200px
+  width 60
+  margin-top 15rem
+  height 400px
+  width 600px
+  box-sizing border-box
+  border 1px solid red
+  lost-column 1/2
+
+  .lost-item
+    border 1px solid
+    box-sizing border-box
+    font-size 2rem
+    width 100px
+    height 50px
+    lost-column 1/3 2 10px flex

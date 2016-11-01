@@ -1,10 +1,24 @@
-.btn--link
+$btn
   font-size: 1.6rem;
   font-family: $primary-font
-  color $secondary-color
   transition all .2s
   text-decoration none
+  box-shadow 0 1px 0
+  cursor pointer
+
+
+.btn__link
+  @extend $btn
+  color $secondary-color
+  box-shadow-color $secondary-color--light
   &:hover
     color $secondary-color--light
     box-shadow 0 3px 0 $secondary-color--light
+
+  &--light
+    @extend $btn
+    box-shadow 0 1px 0 #b0976d
+    color #b0976d
+    &:hover
+      box-shadow 0 3px 0 #b0976d
 

@@ -1,5 +1,10 @@
 var gulp = require('gulp');
 var stylus = require('gulp-stylus');
+var poststylus = require('poststylus');
+var postcss = require('gulp-postcss');
+var sourcemaps = require('gulp-sourcemaps');
+var autoprefixer = require('autoprefixer');
+var lost = require('lost');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
@@ -51,7 +56,7 @@ var buildPaths = {
 gulp.task('css', function () {
   gulp.src(srcPaths.styl)
     .pipe(stylus({
-      use: [rupture()],
+      use: [ rupture(), poststylus([lost(), autoprefixer()]) ],
       compress: true
     }))
     .pipe(gcmq())

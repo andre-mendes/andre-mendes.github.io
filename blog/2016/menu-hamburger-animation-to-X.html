@@ -1,4 +1,4 @@
-<!DOCTYPE html><html></html><!DOCTYPE html><html><head><title>André Mendes - Front-end Developer</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,700" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,700" rel="stylesheet"><link rel="stylesheet" href="/assets/css/main.css"></head></html><body><header role="banner" class="header__block"><h1 role="logo" alt="André Mendes"><a href="/" class="logo"></a></h1><nav class="navbar"><ul><li><a href="/blog/" data-title="Blog" class="navbar__link">Blog</a></li><li><a href="/projects/" data-title="Lab" class="navbar__link">Projects</a></li><li><a href="#!" data-title="Contact" class="navbar__link">Contact</a></li></ul></nav></header><article itemscope itemtype="http://schema.org/Blog" lang="pt-br" class="blog"><div itemprop="text" class="post__content"><h1 itemprop="name">How to make a menu hamburger animation to X</h1><h2>User Experience &lt;3</h2><p>Hamburgers icons are pretty fixed on our minds nowadays. So why not give some
+<!DOCTYPE html><html></html><!DOCTYPE html><html><head><title>André Mendes - Front-end Developer</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,700" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,700" rel="stylesheet"><link rel="stylesheet" href="/assets/css/main.css"></head></html><body><header role="banner" class="header__block"><h1 role="logo" alt="André Mendes"><a href="/" class="logo"></a></h1><nav class="navbar"><ul><li><a href="/blog/" data-title="Blog" class="navbar__link">Blog</a></li><li><a href="/projects/" data-title="Lab" class="navbar__link">Projects</a></li><li><a href="#!" data-title="Contact" class="navbar__link">Contact</a></li></ul></nav></header><article itemscope itemtype="http://schema.org/Blog" lang="pt-br" class="blog"><div itemprop="text" class="post__content"><header class="post__header"><h1 itemprop="name">How to make a menu hamburger animation to X</h1></header><h2>User Experience &lt;3</h2><p>Hamburgers icons are pretty fixed on our minds nowadays. So why not give some
 more life and good expirience to it?</p>
 <p>To show the user that some thing can happen is very important, so we have to give
 enphasis in the actions. When you open a menu bar, for example, and the button
@@ -11,26 +11,159 @@ small Javascript to make the trigger :)</p>
 <h2>Creating the button</h2><p>The first thing to do is create or markup, this is pretty simple. Our parent tag
 will be a <strong>button</strong> with an inner <strong>span</strong> tag. The button will be our container
 and the spans our bars and our X at the end.</p>
-<p>This is or markup:</p>
-<pre><code class="language-html">&lt;button class=&quot;menu&quot;&gt;
+<p>This is how your markup should looks like:</p>
+<pre><code class="language-html">&lt;button id=&quot;js-menuBtn&quot; class=&quot;menu&quot;&gt;
   &lt;span class=&quot;menu__icon-bar&quot;&gt;&lt;/span&gt;
 &lt;/button&gt;
 </code></pre>
-<p>Now, we have to reset all the button stles. Remove borders, background colors and
-the others default appearances :)</p>
-<p>So we define a width and height of the button (it&#39;s interesting to a good area, because
-this will be the touch area in mobile devices).</p>
+<p>Now, we have to reset all the button styles. Remove borders, background colors and
+the others default appearances and do our styles :)</p>
+<p>So we define a width and height of the button (it&#39;s interesting to have a good
+area, because this will be the touch area in mobile devices).</p>
 <p>This is what we have</p>
 <pre><code class="language-css">.menu {
+  border-radius: none;
+  border: none;
+  background: #2A363B;
+  cursor: pointer;
   display: block;
   position: relative;
   margin: 0;
   padding: 0;
-  width: 96px;
   height: 96px;
-  appearance: none;
-  border-radius: none;
-  border: none;
-  cursor: pointer;
+  width: 96px;
 }
-</code></pre></div></article><footer class="footer"><p>keep <span class="heart">❤</span> coding</p></footer><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script><script src="https://use.fontawesome.com/c22a7ef303.js"></script><script src="/assets/js/main.js"></script></body>
+</code></pre>
+<h2>Creating the bars</h2><p>For this we will use the pseudo elements before and after.
+I&#39;ll not enter in details, but you can
+<a href="http://www.w3schools.com/css/css_pseudo_elements.asp" target="_blank" title="See about in w3school">
+  see more about pseudo elements
+</a>
+here in w3school.</p>
+<p>Well, this is what we gonna do. In first place, we will create our main bar and then
+create our top and bottom bar, that will be our pseudo elements and at the end our X button.</p>
+<p>Show me the code :D</p>
+<pre><code class="language-css">.menu__icon-bar {
+  background-color: #E84A5F;
+  border-radius: 5px;
+  height: 10px;
+  width: 76px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: background-color .4s;
+}
+
+.menu__icon-bar:before {
+  content: &#39;&#39;;
+  background-color: #E84A5F;
+  border-radius: 5px;
+  height: 10px;
+  width: 76px;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  transform: translate3d(0, -25px,0);
+  transition: transform .4s;
+}
+
+.menu__icon-bar:after {
+  content: &#39;&#39;;
+  background-color: #E84A5F;
+  border-radius: 5px;
+  height: 10px;
+  width: 76px;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  transform: translate3d(0, 25px,0);
+  transition: transform .4s;
+}
+</code></pre>
+<h2>Animating the bars</h2><p>Now you already have a pretty button in your screen &lt;3 So lets give more life
+to this guy.</p>
+<p>For this, we will use a litte javascript just to add a class, that will make all
+the magic.</p>
+<pre><code class="language-javascript">var button = document.getElementById(&#39;js-menuBtn&#39;);
+
+button.addEventListener(&#39;click&#39;, function(event) {
+  this.classList.toggle(&#39;open&#39;);
+});
+</code></pre>
+<p>Right. Now everytime we click on the button, we will add the class <strong>open</strong> to the button.
+Then all we have to do is change the state of the button when we have this
+class.</p>
+<p>To make the bars turn into the X, we just have to turn it with the css property
+<strong>transform</strong> using the value <strong>rotate</strong>, that you also can
+<a href="http://www.w3schools.com/cssref/css3_pr_transform.asp" target="_blank" title="See about in w3school">
+  see more about here
+</a>
+and set a <strong>transition</strong> to make this more smooth. Lets see the code!</p>
+<pre><code class="language-css">/* Add transition to make this mor smooth */
+
+/* Main bar */
+.menu__icon-bar {
+  background-color: #E84A5F;
+  border-radius: 5px;
+  height: 10px;
+  width: 76px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+
+  transition: background-color .4s;
+}
+
+/* Top bar */
+.menu__icon-bar:before {
+  content: &#39;&#39;;
+  background-color: #E84A5F;
+  border-radius: 5px;
+  height: 10px;
+  width: 76px;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  transform: translate3d(0, -25px,0);
+  will-change: transform;
+
+  transition: transform .4s;
+}
+
+/* Bottom bar */
+.menu__icon-bar:after {
+  content: &#39;&#39;;
+  background-color: #E84A5F;
+  border-radius: 5px;
+  height: 10px;
+  width: 76px;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  transform: translate3d(0, 25px,0);
+  will-change: transform;
+
+  transition: transform .4s;
+}
+</code></pre>
+<h3>The main bar</h3><p>Here we just have to set background-color to transparent to hide the bar.</p>
+<pre><code class="language-css">/* changing the background to transparent */
+.open .menu__icon-bar {
+  background-color: transparent;
+}
+</code></pre>
+<h3>The top/bottom bar</h3><p>Here is where all the magic happens :D Note that the <strong>translate position Y</strong>
+came back to 0, this is to center our new X.</p>
+<pre><code class="language-css">/* Top bar */
+.open .menu__icon-bar:before {
+  transform: rotate(-135deg) translate3d(0,-0,0);
+}
+
+
+/* Bottom bar */
+.open .menu__icon-bar:after {
+  transform: rotate(135deg) translate3d(0,0,0);
+}
+</code></pre>
+<p>Yeaah guys, that&#39;s it!! You can <a href="http://codepen.io/andremendes/pen/qaeKMG" title="See the code in codepen" target="_blank">see all the code runing</a>
+in my codepen :D</p></div></article><footer class="footer"><p>keep <span class="heart">❤</span> coding</p></footer><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script><script src="https://use.fontawesome.com/c22a7ef303.js"></script><script src="/assets/js/main.js"></script></body>
