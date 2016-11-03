@@ -3,54 +3,59 @@
   padding 0 0 15rem 0
 
 
-  // header
+  /*
+   * Post header
+   * -------------------------------------------------- */
   .post__header
-    height 100vh
+    padding-top 60px
+    min-height 100vh
     width 100%
-    background lighten($secondary-color--light,15%)
+    background $secondary-color--light
     lost-align center
 
 
-  // Titles
+  /*
+   * Titles
+   * -------------------------------------------------- */
   h2,h3,h4,h5,h6
     margin 10rem auto 4rem
     max-width 80rem
     padding 0 1.5rem
     box-sizing border-box
-    color lighten($secondary-color--light,15%)
+    color $secondary-color
 
   h1
-    font-size 8rem
+    font(h1, primary, bold)
     color #fff
   h2
-    font-size 4rem
-    font-family 'Open Sans'
+    font(h2, opensans)
   h3
-    font-size 3rem
-    font-family 'Open Sans'
+    font(h3, opensans)
   h4
-    font-size 2.5rem
+    font(h4)
   h5
-    font-size 2.2rem
+    font(h5)
   h6
-    font-size 2.1rem
+    font(h6)
 
 
-  //Normal texts
+  /*
+   * Normal text
+   * -------------------------------------------------- */
   p
     width auto
     max-width 80rem
     margin 0 auto 3rem
-    font-size 2.1rem
-    line-height 2
     padding 0 1.5rem
     color $grey
     letter-spacing .01rem
     box-sizing border-box
-    font-family 'Open Sans'
+    font(h6, opensans, regular)
 
 
-  // Code
+  /*
+   * Code
+   * -------------------------------------------------- */
   pre
     width 100%
     font-size 2rem
@@ -61,34 +66,36 @@
     // background darken($grey-dark, 15%)
 
     code
-      // color #a6e22e
       box-sizing border-box
-      padding 0 1.5rem
       display block
+      padding 0 1.5rem
       max-width 80rem
       margin 2rem auto
       line-height 1.5
 
-  // Link
+  /*
+   * Link
+   * -------------------------------------------------- */
   a
-    color $secondary-color--light
+    box-shadow 0 1px 0 $secondary-color--light
+    color lighten($secondary-color--light, 30%)
+    cursor pointer
     transition all .2s
     text-decoration none
-    box-shadow 0 1px 0 $secondary-color--light
-    cursor pointer
-    font-weight 700
     &:visited
-      color $primary-color--light
+      color lighten($primary-color--light, 15%)
       box-shadow-color $primary-color--light
       &:hover
-        $primary-color--light
-        box-shadow 0 3px 0 $primary-color--light
+        color lighten($primary-color--light, 40%)
+        box-shadow 0 3px 0 lighten($primary-color--light, 40%)
 
     &:hover
       box-shadow 0 3px 0 $secondary-color--light
 
 
-  //blockquote
+  /*
+   * Blockquote
+   * -------------------------------------------------- */
   blockquote
     max-width 85rem
     margin 6rem auto

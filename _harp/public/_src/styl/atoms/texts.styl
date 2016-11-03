@@ -1,0 +1,48 @@
+
+/*
+ * Typografy
+ * -------------------------------------------------- */
+
+//title
+$title
+  color $secondary-color
+  text-align center
+
+
+.title
+  @extend $title
+  font(h2, primary-condensed, light)
+  margin 6rem 0 3rem
+
+
+.title__home
+  @extend $title
+  font(primary-condensed, light)
+  text-transform uppercase
+  margin-top 15%
+  margin-bottom 0
+  +above(md)
+    font-size 7rem
+  +below(md)
+    font-size 4rem
+
+
+.caption
+  color $primary-color
+  font-family $primary-font--condensed
+  font-size 2.2rem
+  letter-spacing 0.2rem
+  text-transform uppercase
+  font-weight 300
+  margin 0
+
+.flow-text
+  font(text, primary)
+  color #fff
+  font-size 1.6rem
+
+
+// Date
+.date
+  font(text-small, secondary, bold)
+  color $grey

@@ -1,0 +1,124 @@
+/*
+ * Weight
+ * -------------------------------------------------- */
+
+font-weight(value = '')
+  if (value == bold)
+    font-weight 700
+
+  if (value == regular)
+    font-weight 400
+
+  if (value == light)
+    font-weight 300
+
+/*
+ * Font Family
+ * -------------------------------------------------- */
+
+font-family(family)
+  if (family == primary)
+    font-family 'Roboto Mono',Times,Georgia,serif
+
+  if (family == primary-condensed)
+    font-family 'Roboto Condensed', Times, Georgia, serif
+
+  if (family == secondary)
+    font-family 'Poppins', Arial
+
+  if (family == opensans)
+    font-family 'Open Sans', Arial
+
+
+/*
+ * Font
+ * -------------------------------------------------- */
+font(type = '', family = '', weight = '')
+
+  /*
+   * Type
+   * -------------------------------------------------- */
+
+  if (type)
+
+    /*
+     * Headings
+     * -------------------------------------------------- */
+    if (type == h1)
+      font-size 8rem
+      line-height 9rem
+      +below('sm')
+        font-size 6rem
+        line-height 7rem
+
+    if (type == h2)
+      font-size 4rem
+      line-height 5rem
+
+    if (type == h3)
+      font-size 3rem
+      line-height 4rem
+
+    if (type == h4)
+      font-size 2.5rem
+      line-height 3rem
+
+    if (type == h5)
+      font-size 2.2rem
+      line-height 2.6rem
+
+    if (type == h6)
+      font-size 2.1rem
+      line-height 2
+
+    /*
+     * Regular texts
+     * -------------------------------------------------- */
+    if (type == text-small)
+      line-height 1.6rem
+      +above(xs)
+        font-size 1.2rem
+      +below(xs)
+        font-size 1.5rem
+
+    if (type == text)
+      +above(xs)
+        font-size 1.6rem
+        line-height 2.2rem
+      +below(xs)
+        font-size 1.8rem
+        line-height 2.8rem
+
+    if (type == text-large)
+      +above(xs)
+        font-size 1.8rem
+        line-height 2.4rem
+      +below(xs)
+        font-size 2rem
+        line-height 2.8rem
+
+    if (type == text-xlarge)
+      +above(xs)
+        font-size 2rem
+        line-height 2.6rem
+      +below(xs)
+        font-size 2.2rem
+        line-height 3rem
+  /*
+   * Family
+   * -------------------------------------------------- */
+
+  if (family)
+    font-family(family)
+
+
+  /*
+   * Wight
+   * -------------------------------------------------- */
+
+  if (weight)
+    font-weight(weight)
+
+
+
+

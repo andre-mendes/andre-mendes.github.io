@@ -1,12 +1,18 @@
+/*
+ * Button
+ * -------------------------------------------------- */
+
 $btn
-  font-size: 1.6rem;
-  font-family: $primary-font
-  transition all .2s
-  text-decoration none
+  font(text, primary)
   box-shadow 0 1px 0
   cursor pointer
+  transition all .2s
+  text-decoration none
 
 
+/*
+ * Button link
+ * -------------------------------------------------- */
 .btn__link
   @extend $btn
   color $secondary-color
@@ -15,10 +21,13 @@ $btn
     color $secondary-color--light
     box-shadow 0 3px 0 $secondary-color--light
 
+  /*
+   * Button link - LIGHT
+   * -------------------------------------------------- */
   &--light
     @extend $btn
-    box-shadow 0 1px 0 #b0976d
-    color #b0976d
+    box-shadow 0 1px 0 darken($secondary-color, 60%)
+    color darken($secondary-color, 60%)
     &:hover
-      box-shadow 0 3px 0 #b0976d
+      box-shadow 0 3px 0 darken($secondary-color, 60%)
 

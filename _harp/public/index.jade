@@ -23,12 +23,12 @@
 //- About
 //---------------------------------------
 section.section__about
-  div.avatar__block(itemscope="" itemtype='http://schema.org/Person')
+  div.avatar(itemscope="" itemtype='http://schema.org/Person')
     img.avatar__img(src="https://avatars3.githubusercontent.com/u/15808041" alt="André Mendes")
 
     div.section__title
       h1.avatar__name(itemprop='name') André Mendes
-      h2.avatar__subtitle #[strong(itemprop='jobTitle') Front-End Developer]
+      h2.avatar__subtitle(itemprop='jobTitle') Front-End Developer
       p.flow-text
         | A highly motivated guy, degree in advertising and graduated student in
         | Web and Mobile Development with experience in Design and Development.
@@ -72,12 +72,12 @@ section.section(lang='pt-br')
   - var postCount = 0
   for post in public.blog._data
     if postCount < 3
-      a.blog__link(href='/blog/#{ post.path }' title='Ver o post #{ post.title }'
+      a.blog-thumb(href='/blog/#{ post.path }' title='Ver o post #{ post.title }'
         itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost")
-        article.blog__post
+        article
           time.date #{ post.date }
-          h1.blog__title #{ post.title }
-          p.blog__text #{ post.description }
+          h1.blog-thumb__title #{ post.title }
+          p.blog-thumb__text #{ post.description }
 
       - postCount++;
 

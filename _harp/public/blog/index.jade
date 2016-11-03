@@ -7,9 +7,9 @@ section.section(lang='pt-br' itemscope itemtype='http://schema.org/Blog')
     h2.title Projects, thoughts, everything...
 
   for post in public.blog._data
-    a.blog__link(href='/blog/#{ post.path }' title='Ver o post #{ post.title }')
-      article.blog__post
-        p.blog__author(itemprop='author') Teste
+    a.blog-thumb(href='/blog/#{ post.path }' title='Ver o post #{ post.title }')
+      article
+        p.blog-thumb__author(itemprop='author') Teste
         time.date(itemprop='dateCreated') #{ post.date }
-        h1.blog__title(itemprop='name') #{ post.title }
-        p.blog__text(itemprop='description') #{ post.description }
+        h1.blog-thumb__title(itemprop='name') #{ post.title }
+        p.blog-thumb__text(itemprop='description') #{ post.description }
