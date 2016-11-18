@@ -27,7 +27,121 @@ $btn
   &--light
     @extend $btn
     box-shadow 0 1px 0 darken($secondary-color, 60%)
-    color darken($secondary-color, 60%)
+    color #fff
     &:hover
       box-shadow 0 3px 0 darken($secondary-color, 60%)
 
+
+
+.box{
+  position: relative;
+  overflow: hidden;
+  lost-column: 1/3;
+  padding: 1rem;
+  box-sizing: border-box;
+  min-height: 200px;
+}
+.box:before,
+.box:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $secondary-color--dark;
+    opacity: 0.5;
+    -webkit-transition: all 0.45s ease 0s;
+    transition: all 0.45s ease 0s;
+}
+.box:before{
+    -webkit-transform: skew(30deg) translateX(-80%);
+    transform: skew(30deg) translateX(-80%);
+}
+.box:hover:before{
+    -webkit-transform: skew(30deg) translateX(-20%);
+    transform: skew(30deg) translateX(-20%);
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+}
+.box:after{
+    -webkit-transform: skew(-30deg) translateX(-70%);
+    transform: skew(-30deg) translateX(-70%);
+}
+.box:hover:after{
+    -webkit-transform: skew(-30deg) translateX(-10%);
+    transform: skew(-30deg) translateX(-10%);
+}
+.box img{
+    width: 100%;
+    height: auto;
+}
+.box .box-content{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding: 20px 40% 20px 20px;
+}
+.box .box-content:before,
+.box .box-content:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: darken($secondary-color--dark, 20%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    opacity: 0.5;
+    z-index: -1;
+    -webkit-transition: all 0.45s ease 0s;
+    transition: all 0.45s ease 0s;
+}
+.box .box-content:before{
+    -webkit-transform: skew(30deg) translateX(-100%);
+    transform: skew(30deg) translateX(-100%);
+}
+.box:hover .box-content:before{
+    -webkit-transform: skew(30deg) translateX(-40%);
+    transform: skew(30deg) translateX(-40%);
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+}
+.box .box-content:after{
+    -webkit-transform: skew(-30deg) translateX(-90%);
+    transform: skew(-30deg) translateX(-90%);
+}
+.box:hover .box-content:after{
+    -webkit-transform: skew(-30deg) translateX(-30%);
+    transform: skew(-30deg) translateX(-30%);
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+.box .title{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1em;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+}
+.box .post{
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.5;
+    opacity: 0;
+    text-transform: capitalize;
+    transition: all 0.5s ease 0s;
+}
+.box:hover .title,
+.box:hover .post{
+    opacity: 0.9;
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+@media only screen and (max-width: 990px){
+    .box{ margin-bottom: 20px; }
+}
