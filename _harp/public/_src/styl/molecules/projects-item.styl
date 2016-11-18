@@ -42,3 +42,105 @@
     font(text, secondary)
     color $grey
     margin-bottom 2rem
+
+
+/*
+ * Project Item - test hover
+ * -------------------------------------------------- */
+.box
+  position relative
+  overflow hidden
+  padding 1rem
+  box-sizing border-box
+  min-height 200px
+  +above(xs)
+    lost-column 1/3
+
+  &:before, &:after
+    content ""
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    background $secondary-color--dark
+    opacity 0.5
+    transition all 0.45s ease 0s
+    will-change transform
+
+  &:before
+    transform: skew(30deg) translateX(-80%);
+  &:hover:before
+    transform skew(30deg) translateX(-20%)
+    transition-delay 0.05s
+
+  &:after
+    transform skew(-30deg) translateX(-70%)
+  &:hover:after
+    transform skew(-30deg) translateX(-10%)
+
+
+  img
+    width 100%
+    height auto
+    transform scale(1.4)
+
+  // Box content
+  &-content
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    z-index 1
+    padding 20px 40% 20px 20px
+
+    &:before,
+    &:after
+      content ""
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+      background darken($secondary-color--dark, 20%)
+      box-shadow 0 0 20px rgba(0, 0, 0, 0.7)
+      opacity 0.5
+      z-index -1
+      transition all 0.45s ease 0s
+      will-change transform
+    &:before
+      transform skew(30deg) translateX(-100%)
+    &:after
+      transform skew(-30deg) translateX(-90%)
+
+  // Hover
+  &:hover .box-content:before
+      transform skew(30deg) translateX(-40%)
+      transition-delay 0.15s
+  &:hover .box-content:after
+      transform skew(-30deg) translateX(-30%)
+      transition-delay 0.1s
+
+  .title
+    font-size 2rem
+    color #fff
+    line-height 1em
+    opacity 0
+    transition all 0.5s ease 0s
+    will-change opacity
+
+  .post
+    font-size 16px
+    font-family arial
+    color #fff
+    line-height 1.5
+    opacity 0
+    text-transform capitalize
+    transition all 0.5s ease 0s
+    will-change opacity
+
+  &:hover .title,
+  &:hover .post
+    opacity 0.9
+    transition-delay 0.2s

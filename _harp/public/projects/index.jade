@@ -15,9 +15,9 @@ section.section
         p.project__description #{ project.description }
         a.btn__link(href='#{ project.path }' title='View project' target='_blank') View the project
 
-      article.box
+      a.box(href='#{ project.path }' title='View project' target='_blank')
         picture.project__picture
           img(src='/assets/img/projects/#{ project.image }' alt="Thumbnail of #{ project.title }'s")
         div.box-content
-          h2.title #{ project.description }
+          h2.title #[strong #{ project.description }]
           span.post #{ project.category }
