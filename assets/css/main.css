@@ -387,6 +387,8 @@ select {
 .box img {
   width: 100%;
   height: auto;
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
 }
 
 .box .box-content {
@@ -440,7 +442,7 @@ select {
 }
 
 .box .title {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #fff;
   line-height: 1em;
   opacity: 0;
@@ -449,7 +451,7 @@ select {
 }
 
 .box .post {
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
   line-height: 1.5;
   opacity: 0;
