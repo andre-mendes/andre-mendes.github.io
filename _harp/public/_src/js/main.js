@@ -1,5 +1,3 @@
-// Initialize
-new Clipboard('.clipboard');
 
 
 // $(document).ready(function() {
