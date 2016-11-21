@@ -1,0 +1,13 @@
+{
+  "name": "ANdré Mendes - Front-End",
+  "icons": [
+    {
+      "src": "assets/img/photo.jpg",
+      "sizes": "48x48",
+      "type": "image/jpg",
+      "density": 1.0
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone"
+}
