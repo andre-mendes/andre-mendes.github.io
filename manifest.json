@@ -1,10 +1,10 @@
 {
-  "name": "André Mendes - Front-End",
+  "name": "André Mendes - Front-End Developer",
   "icons": [
     {
-      "src": "/assets/img/photo.jpg",
+      "src": "/assets/img/photo.png",
       "sizes": "48x48",
-      "type": "image/jpg",
+      "type": "image/png",
       "density": 1.0
     }
   ],
