@@ -2,9 +2,9 @@
   "name": "ANdré Mendes - Front-End",
   "icons": [
     {
-      "src": "img/launcher-icon-1x.png",
+      "src": "assets/img/photo.jpg",
       "sizes": "48x48",
-      "type": "assets/img/photo.jpg",
+      "type": "image/jpg",
       "density": 1.0
     }
   ],
