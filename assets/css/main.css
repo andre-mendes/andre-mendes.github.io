@@ -828,6 +828,7 @@ body main {
   width: 100%;
   background: #5172b0;
   position: relative;
+  box-sizing: border-box;
 }
 
 .post__content .post__header > * {
@@ -858,6 +859,8 @@ body main {
   font-family: 'Roboto Mono',Times,Georgia,serif;
   font-weight: 700;
   color: #fff;
+  text-align: center;
+  width: 80%;
 }
 
 .post__content h2 {

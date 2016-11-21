@@ -1,4 +1,5 @@
-
+// Initialize
+new Clipboard('.clipboard');
 
 
 // $(document).ready(function() {
@@ -15,3 +16,5 @@
 //     $('#home').css("background-position", newvalueX+"px     "+newvalueY+"px");
 //   });
 // });
+
+

@@ -2,7 +2,7 @@
 ## User Experience <3
 
 Hamburgers icons are pretty fixed on our minds nowadays. So why not give some
-more life and good expirience to it?
+more life and good experience to it?
 
 To show the user that some thing can happen is very important, so we have to give
 enphasis in the actions. When you open a menu bar, for example, and the button
@@ -15,7 +15,11 @@ this is the close button.
 So today, I'm going to show you how to create a simple animation using CSS and a
 small Javascript to make the trigger :)
 
-## Creating the button
+This is the <a href="http://codepen.io/andremendes/pen/qaeKMG"
+  title="See the code in codepen" target="_blank">awesome and sexy button</a>
+that we will create :D
+
+## 1 - Creating the button
 
 The first thing to do is create or markup, this is pretty simple. Our parent tag
 will be a **button** with an inner **span** tag. The button will be our container
@@ -52,7 +56,7 @@ This is what we have
 }
 ```
 
-## Creating the bars
+## 2 - Creating the bars
 
 For this we will use the pseudo elements before and after.
 I'll not enter in details, but you can
@@ -106,7 +110,7 @@ Show me the code :D
 }
 ```
 
-## Animating the bars
+## 3 - Animating the bars
 
 Now you already have a pretty button in your screen <3 So lets give more life
 to this guy.
