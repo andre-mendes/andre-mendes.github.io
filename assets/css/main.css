@@ -530,7 +530,8 @@ body main {
   will-change: transform;
 }
 
-.navbar__link:hover:after {
+.navbar__link:hover:after,
+.navbar__link.active:after {
   -webkit-transform: scale3d(1,1,1);
   transform: scale3d(1,1,1);
 }

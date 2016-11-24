@@ -1,4 +1,13 @@
 {
+  "creating-an-iOS-toggle-button": {
+    "cover": "dark-theme-chrome.png",
+    "cover_alt": "Creating an iOS like switch-toggle button in pure CSS",
+    "path":"2016/creating-an-iOS-toggle-button",
+    "date": "24/11/2016",
+    "title": "Creating an iOS like switch-toggle button in pure CSS",
+    "description": "I've seen this switch-style button everywhere, so lets see how to build it!"
+  },
+
   "menu-hamburger-animation-to-X": {
     "cover": "dark-theme-chrome.png",
     "cover_alt": "How to make a menu hamburger animation to X",
@@ -6,16 +15,5 @@
     "date": "28/10/2016",
     "title": "How to make a menu hamburger animation to X",
     "description": "Hamburgers icons are pretty fixed on our minds nowadays. So why not give some more life and good experience to it?"
-  },
-
-  "creating-an-iOS-toggle-button": {
-    "cover": "dark-theme-chrome.png",
-    "cover_alt": "Creating an iOS style switch-toggle button in pure CSS",
-    "path":"2016/creating-an-iOS-toggle-button",
-    "date": "24/11/2016",
-    "title": "Creating an iOS style switch-toggle button in pure CSS",
-    "description": "I've seen this switch-style button everywhere, so lets see how to build it!"
   }
-
-
 }

@@ -6,8 +6,10 @@ header.header__block(role='banner')
   nav.navbar
     ul
       li
-        a.navbar__link(href="/blog/" data-title="Blog") Blog
+        a.navbar__link(href="/blog/" data-title="Blog"
+          class="#{ current.path[0] == 'blog' ? 'active' : '' }") Blog
       li
-        a.navbar__link(href="/projects/" data-title="Lab") Projects
+        a.navbar__link(href="/projects/" data-title="Lab"
+          class="#{ current.path[0] == 'projects' ? 'active' : '' }") Projects
       //-li
         a.navbar__link(href="#!" data-title="Contact") Contact
