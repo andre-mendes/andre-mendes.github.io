@@ -818,6 +818,11 @@ body main {
   width: 100%;
 }
 
+.cp_embed_wrapper {
+  max-width: 80rem;
+  margin: 0 auto 3rem;
+}
+
 .post__content {
   padding: 0 0 15rem 0;
 }
@@ -902,6 +907,27 @@ body main {
   line-height: 2;
   font-family: 'Open Sans',Arial;
   font-weight: 400;
+}
+
+.post__content ul,
+.post__content ol {
+  width: auto;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 0 4rem;
+  color: #3a4750;
+  letter-spacing: .01rem;
+  box-sizing: border-box;
+  font-size: 2.1rem;
+  line-height: 2;
+  font-family: 'Open Sans',Arial;
+  font-weight: 400;
+}
+
+.post__content ul p,
+.post__content ol p {
+  margin: 0;
+  color: #52159d;
 }
 
 .post__content pre {

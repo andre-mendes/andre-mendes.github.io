@@ -19,6 +19,9 @@ This is the <a href="http://codepen.io/andremendes/pen/qaeKMG"
   title="See the code in codepen" target="_blank">awesome and sexy button</a>
 that we will create :D
 
+<p data-height="265" data-theme-id="0" data-slug-hash="qaeKMG" data-default-tab="result" data-user="andremendes" data-embed-version="2" data-pen-title="Hamburger button turn into X " class="codepen">See the Pen <a href="http://codepen.io/andremendes/pen/qaeKMG/">Hamburger button turn into X </a> by Andr Mendes (<a href="http://codepen.io/andremendes">@andremendes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 ## 1 - Creating the button
 
 The first thing to do is create or markup, this is pretty simple. Our parent tag

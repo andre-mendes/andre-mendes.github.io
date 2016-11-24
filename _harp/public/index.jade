@@ -71,7 +71,7 @@ section.section(lang='pt-br')
 
   - var postCount = 0
   for post in public.blog._data
-    if postCount < 3
+    if postCount < 2
       a.blog-thumb(href='/blog/#{ post.path }' title='Ver o post #{ post.title }'
         itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost")
         article
