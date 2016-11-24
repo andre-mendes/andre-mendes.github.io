@@ -5,8 +5,8 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 ga('create', 'UA-87790457-1', 'auto');
 ga('send', 'pageview');
-</script></head></html></script><body><header role="banner" class="header__block"><h1 role="logo" alt="André Mendes"><a href="/" class="logo"></a></h1><nav class="navbar"><ul><li><a href="/blog/" data-title="Blog" class="navbar__link">Blog</a></li><li><a href="/projects/" data-title="Lab" class="navbar__link">Projects</a></li></ul></nav></header><article itemscope itemtype="http://schema.org/Blog" lang="pt-br" class="blog"><div itemprop="text" class="post__content"><header class="post__header"><h1 itemprop="name">Creating an iOS toggle style in pure CSS</h1></header><h3>The sexy and elegant iOS switch button &lt;3</h3><p>Hey guys, today a work&#39;s friend ank me to teach him to create an iOS toggle button style
-using just CSS.</p>
+</script></head></html></script><body><header role="banner" class="header__block"><h1 role="logo" alt="André Mendes"><a href="/" class="logo"></a></h1><nav class="navbar"><ul><li><a href="/blog/" data-title="Blog" class="navbar__link">Blog</a></li><li><a href="/projects/" data-title="Lab" class="navbar__link">Projects</a></li></ul></nav></header><article itemscope itemtype="http://schema.org/Blog" lang="pt-br" class="blog"><div itemprop="text" class="post__content"><header class="post__header"><h1 itemprop="name">Creating an iOS style switch-toggle button in pure CSS</h1></header><h3>The sexy and elegant iOS switch button &lt;3</h3><p>Hey guys, today a work&#39;s friend ask me to teach him to create an iOS switch-toggle
+button style using just CSS.</p>
 <p>So I decide to write about it because I have seen these switch-style every where
 and peaple think that this is hard to do.. and it&#39;s not :D</p>
 <h2>1 - Build your markup</h2><p>The first path to do is build your block for the switch button. A simple div, a label
@@ -69,7 +69,7 @@ We&#39;re using the checkbox&#39;s label for this.</p>
 </code></pre>
 <p>Yeaaah dude, now you already have an sexy and pretty button in you screen.
 But this still not doing anything :P</p>
-<h2>3 - All the magic</h2><p>For the &quot;black magic&quot; we&#39;ll use the <strong>CSS selector +</strong> to get the element just after
+<h2>3 - All the magic</h2><p>For the &quot;black magic&quot; we&#39;ll use the <strong>CSS selector +</strong> to get the element after
 our checkbox when it is <strong>checked</strong>.</p>
 <pre><code class="language-css">/* all magic here using :checked and the selector + */
 .hide-toggle:checked + .switch-button {
@@ -79,6 +79,9 @@ our checkbox when it is <strong>checked</strong>.</p>
   transform: translate3d(100%,0,0);
 }
 </code></pre>
-<p>Aaaannnnd that&#39;s all folks :D this is the elegant and sexy iOS button &lt;3</p>
+<p>As you can see, we use the state <strong>:checked</strong> to make our toggle button and the
+<strong>CSS selector +</strong> to capture and animate the very first element after our input, in
+this case, our <strong>labal</strong>, and make all the stuffs happen :D</p>
+<p>Aaaannnnd that&#39;s all folks :D this is the elegant and sexy iOS button that we build &lt;3</p>
 <p></p><p data-height="265" data-theme-id="0" data-slug-hash="oYwZyX" data-default-tab="result" data-user="andremendes" data-embed-version="2" data-pen-title=" iOS style switch toggle in pure CSS" class="codepen">See the Pen <a href="http://codepen.io/andremendes/pen/oYwZyX/"> iOS style switch toggle in pure CSS</a> by Andr Mendes (<a href="http://codepen.io/andremendes">@andremendes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script></div></article><footer class="footer"><p>keep <span class="heart">❤</span> coding</p></footer><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script><script src="https://use.fontawesome.com/c22a7ef303.js"></script><script src="/assets/js/main.js"></script></body>

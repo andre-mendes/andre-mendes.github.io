@@ -1,7 +1,7 @@
 ### The sexy and elegant iOS switch button <3
 
-Hey guys, today a work's friend ank me to teach him to create an iOS toggle button style
-using just CSS.
+Hey guys, today a work's friend ask me to teach him to create an iOS switch-toggle
+button style using just CSS.
 
 So I decide to write about it because I have seen these switch-style every where
 and peaple think that this is hard to do.. and it's not :D
@@ -89,7 +89,7 @@ But this still not doing anything :P
 
 ## 3 - All the magic
 
-For the "black magic" we'll use the **CSS selector +** to get the element just after
+For the "black magic" we'll use the **CSS selector +** to get the element after
 our checkbox when it is **checked**.
 
 ``` css
@@ -102,6 +102,10 @@ our checkbox when it is **checked**.
 }
 ```
 
-Aaaannnnd that's all folks :D this is the elegant and sexy iOS button <3
+As you can see, we use the state **:checked** to make our toggle button and the
+**CSS selector +** to capture and animate the very first element after our input, in
+this case, our **labal**, and make all the stuffs happen :D
+
+Aaaannnnd that's all folks :D this is the elegant and sexy iOS button that we build <3
 <p data-height="265" data-theme-id="0" data-slug-hash="oYwZyX" data-default-tab="result" data-user="andremendes" data-embed-version="2" data-pen-title=" iOS style switch toggle in pure CSS" class="codepen">See the Pen <a href="http://codepen.io/andremendes/pen/oYwZyX/"> iOS style switch toggle in pure CSS</a> by Andr Mendes (<a href="http://codepen.io/andremendes">@andremendes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>

@@ -10,10 +10,10 @@
 
   "creating-an-iOS-toggle-button": {
     "cover": "dark-theme-chrome.png",
-    "cover_alt": "Creating an iOS toggle style in pure CSS",
+    "cover_alt": "Creating an iOS style switch-toggle button in pure CSS",
     "path":"2016/creating-an-iOS-toggle-button",
     "date": "24/11/2016",
-    "title": "Creating an iOS toggle style in pure CSS",
+    "title": "Creating an iOS style switch-toggle button in pure CSS",
     "description": "I've seen this switch-style button everywhere, so lets see how to build it!"
   }
 
