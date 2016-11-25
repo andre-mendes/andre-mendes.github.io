@@ -6,7 +6,7 @@ $section__block
   width 100%
   margin 0 auto
   padding 10% 15%
-  min-height calc(100vh + 86px)
+  min-height 100vh
   box-sizing border-box
   position relative
   +below(md)
@@ -18,15 +18,16 @@ $section__block
  * Diagonal style for sections top and bottom
  * -------------------------------------------------- */
 $diagonal-style
-  content ''
-  background-color $secondary-color--dark
-  display block
-  height 80px
   position absolute
   left 0
   right 0
+  display block
+  height 580px
+  background-color $secondary-color--dark
   outline 1px solid transparent
-  transform: skewY(-3deg)
+  content ''
+  z-index -1
+  transform: skewY(-4deg)
   transform-origin 100%
   -webkit-transform-style preserve-3d
   -moz-transform-style preserve-3d

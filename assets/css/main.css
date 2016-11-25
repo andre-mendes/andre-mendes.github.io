@@ -371,23 +371,24 @@ body main {
   width: 100%;
   margin: 0 auto;
   padding: 10% 15%;
-  min-height: calc(100vh + 86px);
+  min-height: 100vh;
   box-sizing: border-box;
   position: relative;
 }
 
 .footer:before,
 .section__about:after {
-  content: '';
-  background-color: #38507c;
-  display: block;
-  height: 80px;
   position: absolute;
   left: 0;
   right: 0;
+  display: block;
+  height: 580px;
+  background-color: #38507c;
   outline: 1px solid transparent;
-  -webkit-transform: skewY(-3deg);
-  transform: skewY(-3deg);
+  content: '';
+  z-index: -1;
+  -webkit-transform: skewY(-4deg);
+  transform: skewY(-4deg);
   -webkit-transform-origin: 100%;
   transform-origin: 100%;
   -webkit-transform-style: preserve-3d;
