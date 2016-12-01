@@ -69,3 +69,36 @@ $section--bottom
   width: 100%;
   margin: 0 auto;
   box-sizing border-box
+
+
+
+/* ------------------------------------------------- */
+diagonal(direction = '', height = '')
+  position relative
+
+  &:before,
+  &:after
+    content ''
+    position absolute
+
+
+  // Top
+  if (direction == top)
+    margin-top (height)
+    &:before
+      top -(height)
+      left 0
+      border-bottom (height) solid $secondary-color--dark
+      border-right 100vw solid transparent
+
+  // Bottom
+  if (direction == bottom)
+    margin-bottom (height)
+    &:before
+      bottom -(height)
+      left 0
+      border-top (height) solid $secondary-color--dark
+      border-left 100vw solid transparent
+
+
+

@@ -15,8 +15,9 @@
 // Section About
 //------------------------------------------
 .section__about
-  @extend $section__block, $section--bottom
+  @extend $section__block //, $section--bottom
   background-color $secondary-color--dark
   display flex
   align-items center
+  diagonal(bottom, 100px)
   //background linear-gradient($primary-color 55%, $secondary-color)
