@@ -4,7 +4,9 @@
   "description": "My personal website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "cd ../ && harp compile _harp ./",
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
