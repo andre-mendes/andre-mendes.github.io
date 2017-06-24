@@ -1,16 +1,13 @@
-### The sexy and elegant iOS switch button <3
+# The sexy and elegant iOS switch button <3
 
-Hey guys, today a work's friend asked me to teach him to create an iOS switch-toggle
-button style using just CSS.
+Hey guys, today a co-worker asked me to teach him to create an iOS switch-toggle button style using just CSS.
 
-So I decided to write about it because I have seen these switch-style everywhere
-and some people think that this is hard to do.. but it's not :D
+So I decided to write about it because I have seen these switch-style everywhere and some people think that this is hard to do... but it's not :D
 
 
 ## 1 - Build your markup
 
-The first thing to do is build your block for the switch button. A simple div, a label
-and **of course** our checkbox.
+The first thing to do is to build your block for the switch button. A simple div, a label and **of course** our checkbox.
 
 ```html
 <div class="container">
@@ -19,18 +16,11 @@ and **of course** our checkbox.
 </div>
 ```
 
-See that the **label** comes after our input. That's because we will use the
-<a href="http://www.w3schools.com/cssref/css_selectors.asp" target="_blank"
-  title="See about CSS selecotors in w3school">
-  CSS selecotor **+**
-</a> to make it works.
+See that the **label** comes after our input. That's because we will use the [CSS selector **+**](http://www.w3schools.com/cssref/css_selectors.asp "See about CSS selectors in w3school") to make it work.
 
-So let's make it pretty, right :D ? First to do is hide our default checkbox.
-That's because each browser has their own style, and if you want to control of the block,
-you have to take away with it :D
+So let's make it pretty, right :D ? Now we need to hide the default checkbox. That's because each browser has their own style, and if you want to control of the block, you have to hide it :D
 
-**But**, we'll make it just transparent and out of the screen. It's pretty important
-that the checkbox is still functional, not visible, but functional :)
+Then, we'll make it transparent and put out of the screen. It's pretty important that the checkbox stays functional, not visible, but functional :)
 
 ## 2 - Styling like iOS and creating the elements
 
@@ -45,11 +35,9 @@ You have a lot of ways to hide it, here is the CSS that we will use to do it tod
 }
 ```
 
+Cool. Now that we've got our guy out of the screen, we can style the switch. We're using the checkbox's label for this.
 
-Cool. Now that we've got our guy out of the screen, we can style the switch.
-We're using the checkbox's label for this.
-
-There are two parts to the switch:
+There are two parts of the switch:
 
 1. The container (this uses the actual label)
 2. The switch itself (this uses the :before pseudo-element)
@@ -84,13 +72,12 @@ There are two parts to the switch:
 
 ```
 
-Yeaaah dude, now you already have an sexy and pretty button in your screen.
-But it's still not doing anything :P
+Yeaaah dude, now you already have a sexy and pretty button in your screen. But it's still not doing anything :P
 
 ## 3 - All the magic
 
 For the "black magic" we'll use the **CSS selector +** to get the element after
-our checkbox when it is **checked**.
+our checkbox is **checked**.
 
 ``` css
 /* all magic here using :checked and the selector + */
@@ -102,10 +89,9 @@ our checkbox when it is **checked**.
 }
 ```
 
-As you can see, we use the state **:checked** to make our toggle button and the
-**CSS selector +** to capture and animate the very first element after our input, in
-this case, our **label**, and make all the stuffs happen :D
+As you can see, we use the state **:checked** to make our toggle button and the **CSS selector +** to capture and animate the very first element after our input, in this case, our **label**, and make all the stuffs happen :D
 
-Aaaannnnd that's all folks :D this is the elegant and sexy iOS button that we build <3
+Aaaannnnd that's all folks :D this is the elegant and sexy iOS button that we built <3
+
 <p data-height="265" data-theme-id="0" data-slug-hash="oYwZyX" data-default-tab="result" data-user="andremendes" data-embed-version="2" data-pen-title=" iOS style switch toggle in pure CSS" class="codepen">See the Pen <a href="http://codepen.io/andremendes/pen/oYwZyX/"> iOS style switch toggle in pure CSS</a> by Andr Mendes (<a href="http://codepen.io/andremendes">@andremendes</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
