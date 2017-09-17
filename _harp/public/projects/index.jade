@@ -8,12 +8,6 @@ section.section
 
   .project-grid
     for project, slug in public.projects._data
-      //-article.project
-        h1.project__title #{ project.title }
-        picture.project__picture
-          img(src='/assets/img/projects/#{ project.image }' alt="Thumbnail of #{ project.title }'s website")
-        p.project__description #{ project.description }
-        a.btn__link(href='#{ project.path }' title='View project' target='_blank') View the project
 
       a.box(href='#{ project.path }' title='View project' target='_blank')
         picture.project__picture

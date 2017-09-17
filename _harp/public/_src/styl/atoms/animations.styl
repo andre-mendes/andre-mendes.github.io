@@ -1,0 +1,77 @@
+// -------------------------
+// Keyframes
+// -------------------------
+
+// FadeIn
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(15px);
+		visibility: hidden;
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+		visibility: visible;
+	}
+}
+
+// SliceIn
+@keyframes SliceIn {
+	0% {
+		opacity: 0;
+		transform: translateX(-15px);
+		visibility: hidden;
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+		visibility: visible;
+	}
+}
+
+// SliceOut
+@keyframes SliceOut {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+		visibility: visible;
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateX(-2%);
+		visibility: hidden;
+	}
+}
+
+// Border
+@keyframes borderTransition {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+}
+
+//
+@keyframes flashing {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: .5;
+	}
+}
+
+@keyframes move {
+  from {
+  	background-size: 400% 300px;
+  }
+  to {
+  	background-size: 500% 300px;
+  }
+}

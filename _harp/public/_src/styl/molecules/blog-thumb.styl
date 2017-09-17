@@ -3,16 +3,24 @@
  * Blog Thumb
  * -------------------------------------------------- */
 .blog-thumb
+  animation fadeIn .4s ease .6s forwards
   border-radius 5px
   box-sizing border-box
   border 1px solid $grey-light
   display block
   margin 5rem 0
   max-width 100%
+  opacity 0
   padding 4.5rem 3rem
   text-decoration none
   font-family $primary-font
   transition all .3s
+  
+  for i in (1..5)
+    &:nth-child({i})
+      animation fadeIn .4s ease forwards
+      animation-delay .2s * i
+
   +below(sm)
     padding 4.5rem 1.5rem
 
