@@ -778,6 +778,7 @@ header > .title {
   padding: 1rem;
   box-sizing: border-box;
   min-height: 200px;
+  margin-bottom: 35px;
 }
 
 .box:before,
